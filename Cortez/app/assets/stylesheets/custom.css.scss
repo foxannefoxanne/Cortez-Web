@@ -41,17 +41,17 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 6em;
   letter-spacing: -1px;
-  /*margin-bottom: 30px;*/
-  text-align: left;
+  margin-bottom: 30px;
+  text-align: center;
   font-weight:bold; 
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 3em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
+  text-align: left;
+  font-weight: bold;
   color: $gray-light;
 }
 
@@ -62,7 +62,6 @@ p{
 
 
 /* header */
-
 #logo {
   float: left;
   margin-right: 10px;
@@ -70,7 +69,7 @@ p{
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  /*padding-top: 9px;*/
   font-weight: bold;
   &:hover {
     color: white;
@@ -219,3 +218,15 @@ input {
     margin: 0 auto;
 }
 
+
+.logo-header{
+  display: inline-block; 
+  white-space: nowrap; 
+}
+.cort-header{
+  
+}
+.link-header{
+  display:inline-block; 
+  
+}
