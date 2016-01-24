@@ -14,7 +14,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 90px;
+  /*padding-top: 90px;*/
 }
 
 section {
@@ -39,18 +39,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.2em;
+  font-size: 6em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: normal;
+  font-weight:bold; 
+}
+
+h2 {
+  font-size: 3em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: bold;
   color: $gray-light;
 }
 
@@ -61,7 +62,6 @@ p{
 
 
 /* header */
-
 #logo {
   float: left;
   margin-right: 10px;
@@ -69,7 +69,7 @@ p{
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  /*padding-top: 9px;*/
   font-weight: bold;
   &:hover {
     color: white;
@@ -218,3 +218,59 @@ input {
     margin: 0 auto;
 }
 
+/* navbar */
+.navbar-default {
+    background-color: #009688;
+    border-color: #00695C;
+    border-radius: 0px;
+
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #FFFFFF;
+
+}
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #009688;
+    background-color: #00695C;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #009688;
+    background-color: #00695C;
+}
+
+navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+}
