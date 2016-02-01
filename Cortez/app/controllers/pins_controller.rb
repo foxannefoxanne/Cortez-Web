@@ -3,7 +3,7 @@ class PinsController < ApplicationController
 
   # GET /pins
   def index
-      @pin = Pin.new
+     @pin = Pin.new
      @pins = Pin.all
      @hash = Gmaps4rails.build_markers(@pins) do |pin, marker|
       marker.lat pin.latitude
@@ -23,9 +23,13 @@ class PinsController < ApplicationController
   # GET /pins/new
   def new
     @pin = Pin.new
-
-   #nlat =  params[:nlat]
-   # params[:lng]
+    if params[:latitude]
+      @pin.latitude = params[:latitude]
+      #@pin.longitude=params[:longitude]
+    end 
+    if params[:longitude]
+      @pin.longitude=params[:longitude]
+    end
   end
 
   # GET /pins/1/edit
@@ -35,10 +39,9 @@ class PinsController < ApplicationController
   # POST /pins
   def create
     @pin = Pin.new(pin_params)
-
     if @pin.save
       redirect_to @pin, notice: 'Pin was successfully created.'
-    else
+    else 
       render :new
     end
   end
