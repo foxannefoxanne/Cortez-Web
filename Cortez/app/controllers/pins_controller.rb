@@ -40,7 +40,7 @@ class PinsController < ApplicationController
   def create
     @pin = Pin.new(pin_params)
     if @pin.save
-      redirect_to @pin, notice: 'Pin was successfully created.'
+      redirect_to "/pins"
     else 
       render :new
     end
@@ -49,7 +49,7 @@ class PinsController < ApplicationController
   # PATCH/PUT /pins/1
   def update
     if @pin.update(pin_params)
-      redirect_to @pin, notice: 'Pin was successfully updated.'
+      redirect_to "/pins"
     else
       render :edit
     end
