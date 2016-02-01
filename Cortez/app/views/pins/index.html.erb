@@ -1,7 +1,5 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Map</h1>
-
+<!--
 <table>
   <thead>
     <tr>
@@ -29,11 +27,10 @@
     <% end %>
   </tbody>
 </table> 
-<br>
+<br> 
 
 
-
-<%= link_to 'New Pin', new_pin_path %>
+<%= link_to 'New Pin', new_pin_path %> -->
 
 <p id="notice"><%= notice %></p>
 <script src="//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry" type="text/javascript"></script>
@@ -44,14 +41,7 @@
 <div>
   <div id="map" style='width: 100%; height: 85vh;'>
 </div>
-</div> 
-<!--
-<div style="position:absolute; width:380px; height: 100%; overflow:auto; float:left; padding-left:10px; padding-right:10px;"> 
-  <div style="border:1px solid #ccc; background:#e5e5e5; padding:10px;">
-      <input type="text" id="address">
-      <input type="button" value="find" onClick="geosearch()">
-    </div>
-</div>  --> 
+</div>  
 
 <script type="text/javascript" charset='utf-8'>
 
@@ -86,25 +76,9 @@ function displayOnMap(position){
 }); 
 
 google.maps.event.addListener (handler.getMap(), 'click', function(event){
-   // lat = lat();
   lat = event.latLng.lat()
   lng = event.latLng.lng()
-  /*jQuery.ajax({
-    data: 'nlat=' + lat,
-    data: 'nlng=' + lng,
-    dataType: 'script',
-    type: 'POST',
-    url: "pins"
-    async:false,
-   }); */
-
-  confirm = window.confirm("Do you want to create a pin at " + lat + ", " + lng + "?");
-  if (confirm == true) {
-      window.location = 'pins/new';
-  } 
-  //alert(lat + "   " + lng); 
-  //window.location = 'pins/new';
-
+   window.location = "pins/new?latitude=" + lat + "&longitude=" + lng
 }); 
 
 };
