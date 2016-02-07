@@ -3,7 +3,6 @@ class PinsController < ApplicationController
 
   # GET /pins
   def index
-     @pin = Pin.new
      @pins = Pin.all
      @hash = Gmaps4rails.build_markers(@pins) do |pin, marker|
       marker.lat pin.latitude
@@ -25,7 +24,6 @@ class PinsController < ApplicationController
     @pin = Pin.new
     if params[:latitude]
       @pin.latitude = params[:latitude]
-      #@pin.longitude=params[:longitude]
     end 
     if params[:longitude]
       @pin.longitude=params[:longitude]
