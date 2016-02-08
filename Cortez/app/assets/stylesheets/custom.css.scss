@@ -203,3 +203,74 @@ input {
   margin-top: 45px;
   @include box_sizing;
 }
+
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #009688;
+    color: #ffffff;
+}
+ 
+.btn-primary.outline {
+    color: #009688;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.outline, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #00695C;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #009688;
+    box-shadow: none;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #009688;
+    border-color: #00695C;
+    border-radius: 0px;
+}
+.navbar-custom {
+    background-color: #009688;
+    border-color: #00695C;
+    border-radius: 0px;
+}
+
+/* link */
+.navbar-custom .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+.navbar-custom .navbar-nav > .active > a, 
+.navbar-custom .navbar-nav > .active > a:hover, 
+.navbar-custom .navbar-nav > .active > a:focus {
+    color: #009688;
+    background-color: #00695C;
+    text-align: right; 
+}
+.navbar-custom .navbar-nav > .open > a, 
+.navbar-custom .navbar-nav > .open > a:hover, 
+.navbar-custom .navbar-nav > .open > a:focus {
+    color: #009688;
+    background-color: #00695C;
+}
+
+navbar-custom .navbar-nav > .open > a .caret, 
+.navbar-custom .navbar-nav > .open > a:hover .caret, 
+.navbar-custom .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* mobile version */
+.navbar-custom .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
