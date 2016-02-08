@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   resources :users
-
+  resources :pins
+  resources :maps
+  
+  #root 'maps#index'
+  get 'new_maps' => 'maps#new'
 end
