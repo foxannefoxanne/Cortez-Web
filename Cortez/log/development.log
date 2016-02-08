@@ -18050,3 +18050,761 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 137ms (Views: 126.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-08 19:25:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (623.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (7.7ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 9825ms (Views: 9802.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-8c3f7bdef6ac5baf57f87a9ec9ebc13f4a0fb640b23b1864c96d78ae8c9e0c42.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:01 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:02 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:03 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:03 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:03 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:03 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:03 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:03 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-08 19:26:03 +0000
+
+
+Started GET "/maps" for 129.237.92.212 at 2016-02-08 19:26:11 +0000
+Processing by MapsController#index as HTML
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps"
+  Rendered maps/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1057ms (Views: 1038.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/maps/new" for 129.237.92.212 at 2016-02-08 19:26:19 +0000
+Processing by MapsController#new as HTML
+  Rendered maps/_form.html.erb (1005.8ms)
+  Rendered maps/new.html.erb within layouts/application (1012.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2651ms (Views: 2261.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/maps" for 129.237.92.212 at 2016-02-08 19:26:29 +0000
+Processing by MapsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IQOdNT84BY1qfWuTMZQIFggy9ffEw3pIOJjrvwrXwyCEBBQa/BaJO0qPS15YYPDp2tP2dffH8cBED4JZyJA5Pw==", "map"=>{"title"=>"hello", "description"=>"world"}, "commit"=>"Create Map"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "maps" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "hello"], ["description", "world"], ["created_at", "2016-02-08 19:26:29.218194"], ["updated_at", "2016-02-08 19:26:29.218194"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://capstone-582-gehrigkeane.c9users.io/maps/1
+Completed 302 Found in 27ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/maps/1" for 129.237.92.212 at 2016-02-08 19:26:29 +0000
+Processing by MapsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMap Load (0.3ms)[0m  SELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPin Load (0.2ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."map_id" = ?  [["map_id", 1]]
+  Rendered maps/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1142ms (Views: 1112.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/maps/1/edit" for 129.237.92.212 at 2016-02-08 19:26:33 +0000
+Processing by MapsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMap Load (0.2ms)[0m  [1mSELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered maps/_new_pin_form.html (11.5ms)
+  Rendered maps/edit.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 1352ms (Views: 1349.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/maps" for 129.237.92.212 at 2016-02-08 19:26:38 +0000
+Processing by MapsController#index as HTML
+  [1m[35mMap Load (0.3ms)[0m  SELECT "maps".* FROM "maps"
+  Rendered maps/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1141ms (Views: 1139.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/maps/1/pins" for 129.237.92.212 at 2016-02-08 19:26:41 +0000
+Processing by PinsController#index as HTML
+  Parameters: {"map_id"=>"1"}
+  [1m[36mMap Load (0.2ms)[0m  [1mSELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."map_id" = ?  [["map_id", 1]]
+  Rendered pins/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1014ms (Views: 1010.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/maps/1/pins" for 129.237.92.212 at 2016-02-08 19:26:46 +0000
+Processing by PinsController#index as HTML
+  Parameters: {"map_id"=>"1"}
+  [1m[36mMap Load (0.3ms)[0m  [1mSELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."map_id" = ?  [["map_id", 1]]
+  Rendered pins/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 913ms (Views: 874.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/custom.self-8c3f7bdef6ac5baf57f87a9ec9ebc13f4a0fb640b23b1864c96d78ae8c9e0c42.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:47 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-08 19:26:48 +0000
+
+
+Started GET "/maps/dump" for 129.237.92.212 at 2016-02-08 19:34:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MapsController#show as HTML
+  Parameters: {"id"=>"dump"}
+  [1m[35mMap Load (0.4ms)[0m  SELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 86ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Map with 'id'=dump):
+  app/controllers/maps_controller.rb:67:in `set_map'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (135.9ms)
+
+
+Started GET "/maps/1/dump" for 129.237.92.212 at 2016-02-08 19:35:10 +0000
+
+ActionController::RoutingError (No route matches [GET] "/maps/1/dump"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.1) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.1) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.1) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (85.4ms)
+
+
+Started GET "/dump" for 129.237.92.212 at 2016-02-08 19:36:03 +0000
+Processing by MapsController#dump as HTML
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps"
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered maps/dump.html.erb within layouts/application (73.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1055ms (Views: 1000.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/dump" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+Processing by MapsController#dump as HTML
+  Rendered maps/dump.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 472ms (Views: 466.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/custom.self-8c3f7bdef6ac5baf57f87a9ec9ebc13f4a0fb640b23b1864c96d78ae8c9e0c42.css?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:50 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-08 19:36:51 +0000
+
+
+Started GET "/assets/underscore-min.map" for 129.237.92.212 at 2016-02-08 19:37:00 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.1) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.1) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.1) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (88.7ms)
+
+
+Started GET "/dump" for 129.237.92.212 at 2016-02-08 19:37:34 +0000
+Processing by MapsController#dump as HTML
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps"
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered maps/dump.html.erb within layouts/application (36.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 411ms (Views: 404.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/custom.self-8c3f7bdef6ac5baf57f87a9ec9ebc13f4a0fb640b23b1864c96d78ae8c9e0c42.css?body=1" for 129.237.92.212 at 2016-02-08 19:37:34 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:37:34 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:37:34 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:37:34 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:37:34 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-08 19:37:34 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-08 19:37:34 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+
+Started GET "/assets/underscore-min.map" for 129.237.92.212 at 2016-02-08 19:37:35 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.1) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.1) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.1) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (74.0ms)

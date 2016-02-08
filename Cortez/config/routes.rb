@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :pins
   end 
   
+  get   'dump'  => 'maps#dump'
+  
   #root 'maps#index'
   get 'new_maps' => 'maps#new'
 end
