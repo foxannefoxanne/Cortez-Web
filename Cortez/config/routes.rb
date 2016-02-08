@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :pins
-  resources :maps
+  resources :maps do
+  	resources :pins
+  end 
   
   #root 'maps#index'
   root 'maps#home'

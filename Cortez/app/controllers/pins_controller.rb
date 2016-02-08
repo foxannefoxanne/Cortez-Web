@@ -3,14 +3,14 @@ class PinsController < ApplicationController
 
   # GET /pins
   def index
-     @pin = Pin.new
-     @pins = Pin.all
+     @map = Map.find(params[:map_id])
+     @pins = @map.pins.all
      @hash = Gmaps4rails.build_markers(@pins) do |pin, marker|
       marker.lat pin.latitude
       marker.lng pin.longitude
       marker.title pin.title
       info = "<p><b>" + pin.title + "</b><br>" + pin.description + "<br>" + pin.address + 
-      "<br><a href='/pins/" + pin.id.to_s + "/edit'> Edit </a href> </p> " 
+      "<br><a href='pins/" + pin.id.to_s + "/edit'> Edit </a href> </p> " 
       marker.infowindow marker.infowindow info
     end
   end
@@ -22,10 +22,10 @@ class PinsController < ApplicationController
 
   # GET /pins/new
   def new
-    @pin = Pin.new
+    @map = Map.find(params[:map_id])
+    @pin = @map.pins.build 
     if params[:latitude]
       @pin.latitude = params[:latitude]
-      #@pin.longitude=params[:longitude]
     end 
     if params[:longitude]
       @pin.longitude=params[:longitude]
@@ -34,13 +34,16 @@ class PinsController < ApplicationController
 
   # GET /pins/1/edit
   def edit
+     @map = Map.find(params[:map_id])
+     @pin = @map.pins.find(params[:id])
   end
 
   # POST /pins
   def create
-    @pin = Pin.new(pin_params)
+    @map = Map.find(params[:map_id])
+    @pin = @map.pins.new(pin_params)
     if @pin.save
-      redirect_to "/pins"
+      redirect_to map_pins_path(@map)
     else 
       render :new
     end
@@ -48,8 +51,11 @@ class PinsController < ApplicationController
 
   # PATCH/PUT /pins/1
   def update
+    @map = Map.find(params[:map_id])
+    @pin = @map.pins.find(params[:id])
+
     if @pin.update(pin_params)
-      redirect_to "/pins"
+      redirect_to map_pins_path(@map)
     else
       render :edit
     end
@@ -57,8 +63,11 @@ class PinsController < ApplicationController
 
   # DELETE /pins/1
   def destroy
+    @map = Map.find(params[:map_id])
+    @pin = @map.pins.find(params[:id])
+
     @pin.destroy
-    redirect_to pins_url, notice: 'Pin was successfully destroyed.'
+    redirect_to map_pins_path(@map), notice: 'Pin was successfully destroyed.'
   end
 
   private

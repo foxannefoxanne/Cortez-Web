@@ -8,6 +8,7 @@ class MapsController < ApplicationController
 
   # GET /maps/1
   def show
+    @maps = Map.find(params[:id]) 
   end
 
   # GET /maps/new

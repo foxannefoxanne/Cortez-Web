@@ -3,7 +3,16 @@
 <p>
   <strong>Title:</strong>
   <%= @map.title %>
+  <br>
+  <strong>Description:</strong>
+  <%= @map.description %>
 </p>
+<p>
+  <strong> Pins: </strong>
+  <% @map.pins.each do |pins| %>
+  	<%= pins.title %>
+  <% end %> 
+</p>	
 
 <%= link_to 'Edit', edit_map_path(@map) %> |
 <%= link_to 'Back', maps_path %>
