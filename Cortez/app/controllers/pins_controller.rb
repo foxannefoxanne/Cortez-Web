@@ -43,7 +43,7 @@ class PinsController < ApplicationController
     @map = Map.find(params[:map_id])
     @pin = @map.pins.new(pin_params)
     if @pin.save
-      redirect_to [@map ,@pin]
+      redirect_to map_pins_path(@map)
     else 
       render :new
     end
@@ -55,7 +55,7 @@ class PinsController < ApplicationController
     @pin = @map.pins.find(params[:id])
 
     if @pin.update(pin_params)
-      redirect_to [@map ,@pin]
+      redirect_to map_pins_path(@map)
     else
       render :edit
     end
@@ -67,7 +67,7 @@ class PinsController < ApplicationController
     @pin = @map.pins.find(params[:id])
 
     @pin.destroy
-    redirect_to [@map], notice: 'Pin was successfully destroyed.'
+    redirect_to map_pins_path(@map), notice: 'Pin was successfully destroyed.'
   end
 
   private
