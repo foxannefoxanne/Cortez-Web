@@ -34,6 +34,8 @@ class PinsController < ApplicationController
 
   # GET /pins/1/edit
   def edit
+     @map = Map.find(params[:map_id])
+     @pin = @map.pins.find(params[:id])
   end
 
   # POST /pins
@@ -49,8 +51,11 @@ class PinsController < ApplicationController
 
   # PATCH/PUT /pins/1
   def update
+    @map = Map.find(params[:map_id])
+    @pin = @map.pins.find(params[:id])
+
     if @pin.update(pin_params)
-      redirect_to "/pins"
+      redirect_to [@map ,@pin]
     else
       render :edit
     end
@@ -58,8 +63,11 @@ class PinsController < ApplicationController
 
   # DELETE /pins/1
   def destroy
+    @map = Map.find(params[:map_id])
+    @pin = @map.pins.find(params[:id])
+
     @pin.destroy
-    redirect_to pins_url, notice: 'Pin was successfully destroyed.'
+    redirect_to [@map], notice: 'Pin was successfully destroyed.'
   end
 
   private
