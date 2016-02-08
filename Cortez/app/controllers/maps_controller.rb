@@ -9,6 +9,7 @@ class MapsController < ApplicationController
   def dump
     Rails.application.eager_load! # To load all models app/models/**/*.rb
     @all_records = ActiveRecord::Base.descendants.map &:all
+    render :layout => false
   end
 
   # GET /maps/1
