@@ -40,6 +40,7 @@ class PinsController < ApplicationController
 
   # POST /pins
   def create
+    #TODO: require longitude and latitude. Might not be here. 
     @map = Map.find(params[:map_id])
     @pin = @map.pins.new(pin_params)
     if @pin.save
