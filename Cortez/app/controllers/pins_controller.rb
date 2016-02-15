@@ -10,7 +10,8 @@ class PinsController < ApplicationController
       marker.lng pin.longitude
       marker.title pin.title
       info = "<p><b>" + pin.title + "</b><br>" + pin.description + "<br>" + pin.address + 
-      "<br><a href='pins/" + pin.id.to_s + "/edit'> Edit </a href> </p> " 
+      "<br><a href='pins/" + pin.id.to_s + "/edit'> Edit </a href>" + "<a href='pins/" + pin.id.to_s + "'> Show </a href> </p>"
+
       marker.infowindow marker.infowindow info
     end
   end
