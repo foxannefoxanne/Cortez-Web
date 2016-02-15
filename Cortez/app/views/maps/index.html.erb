@@ -14,7 +14,7 @@
     <% @maps.each do |map| %>
       <tr>
         <td><%= map.title %></td>
-        <td><%= link_to 'Show', map_pins_path(map) %></td>
+        <td><%= link_to 'Show', map_pins_path(map), 'data-no-turbolink' => true  %></td>
         <td><%= link_to 'Edit', edit_map_path(map) %></td>
         <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
