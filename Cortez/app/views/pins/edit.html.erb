@@ -4,4 +4,4 @@
 
 <%= link_to 'Show', [@map, @pin] %> |
 <%= link_to 'Destroy', [@map, @pin], method: :delete, data: { confirm: 'Are you sure?' } %> | 
-<%= link_to 'Back', map_pins_path %>
+<%= link_to 'Back', map_pins_path, 'data-no-turbolink' => true   %>
