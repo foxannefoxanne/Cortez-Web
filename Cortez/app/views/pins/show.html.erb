@@ -25,4 +25,14 @@
   <%= @pin.latitude %>
 </p>
 
+<% unless @pictures.empty? %>
+  <% @pictures.each do |pic| %> 
+     <li class="span3" id="picture_<%= pic.id %>">
+        <div class="thumbnail">
+           <%= image_tag pic.image.url %>
+        </div>
+     </li>
+  <% end %> 
+<% end %> 
+
 <%= link_to 'Back', map_pins_path %>

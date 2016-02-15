@@ -8,14 +8,12 @@
 <body> 
 <p id="notice"><%= notice %></p>
 
-
 <div>
   <div id="map" style='width: 100%; height: 85vh;'>
 </div>
 </div>  
 
 <script type="text/javascript" charset='utf-8'>
-
 var handler =  Gmaps.build('Google');  
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   if(navigator.geolocation)
@@ -25,7 +23,6 @@ var handler =  Gmaps.build('Google');
 function displayOnMap(position){
     var handler = Gmaps.build('Google');
     handler.buildMap({ internal: {id: 'map'}}, function(){
-    //TODO: decide if this is better off up there? Or down here? 
     var markers = handler.addMarkers(<%=raw @hash.to_json %>);
     if (markers.length > 0){
       handler.bounds.extendWith(markers);
