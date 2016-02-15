@@ -17,7 +17,10 @@ class PinsController < ApplicationController
 
   # GET /pins/1
   def show
-  
+     @map = Map.find(params[:map_id])
+     @pin = @map.pins.find(params[:id])
+     @pictures = @pin.pictures
+
   end
 
   # GET /pins/new
@@ -40,10 +43,15 @@ class PinsController < ApplicationController
 
   # POST /pins
   def create
-    #TODO: require longitude and latitude. Might not be here. 
     @map = Map.find(params[:map_id])
     @pin = @map.pins.new(pin_params)
+    flash[:notice] = "Here we go!"
+    # we'll credit: https://github.com/hackhowtofaq/multiple_file_upload_paperclip_rails/blob/master/app/controllers/galleries_controller.rb
     if @pin.save
+      if params[:images]
+         params[:images].each { |image| 
+           @pin.pictures.create(image: image)}
+      end 
       redirect_to map_pins_path(@map)
     else 
       render :new
@@ -56,6 +64,10 @@ class PinsController < ApplicationController
     @pin = @map.pins.find(params[:id])
 
     if @pin.update(pin_params)
+        if params[:images]
+         params[:images].each { |image| 
+           @pin.pictures.create(image: image)}
+      end 
       redirect_to map_pins_path(@map)
     else
       render :edit
@@ -79,6 +91,6 @@ class PinsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def pin_params
-      params.require(:pin).permit(:title, :description, :address, :latitude, :longitude)
+      params.require(:pin).permit(:title, :description, :address, :latitude, :longitude, :picture)
     end
 end
