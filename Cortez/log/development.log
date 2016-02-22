@@ -18808,3 +18808,2218 @@ ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.m
 
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.5ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (74.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMaps (20151206154355)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "maps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+SQLite3::SQLException: table "maps" already exists: CREATE TABLE "maps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (12.3ms)[0m  [1mCREATE TABLE "maps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.9ms)[0m  CREATE TABLE "pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "pin_id" integer) 
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE "pins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "address" varchar, "latitude" float, "longitude" float, "map_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (6.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (6.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (8.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160215035117')
+  [1m[36m (6.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151206183643')[0m
+  [1m[35m (7.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160201195337')
+  [1m[36m (8.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151206154628')[0m
+  [1m[35m (7.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160215012422')
+  [1m[36m (7.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151206154355')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151206183557')
+  [1m[36m (7.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151206183613')[0m
+  [1m[35m (9.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160215012538')
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151206183652')[0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "maps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "pin_id" integer) [0m
+  [1m[35m (9.7ms)[0m  CREATE TABLE "pins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "address" varchar, "latitude" float, "longitude" float, "map_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (6.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (8.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (11.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (6.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (4.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160215035117')[0m
+  [1m[35m (6.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151206183643')
+  [1m[36m (6.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160201195337')[0m
+  [1m[35m (6.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151206154628')
+  [1m[36m (6.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160215012422')[0m
+  [1m[35m (7.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151206154355')
+  [1m[36m (6.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151206183557')[0m
+  [1m[35m (6.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151206183613')
+  [1m[36m (7.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160215012538')[0m
+  [1m[35m (9.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151206183652')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('gehrigkeane@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Gehrig Keane"], ["email", "gehrigkeane@gmail.com"], ["password_digest", "$2a$10$4BUS/jozI6lphYEnmInJrusmY5FL8LeOfS0pf4Eko2XbradGNywg6"], ["admin", "t"], ["created_at", "2016-02-22 20:19:06.449809"], ["updated_at", "2016-02-22 20:19:06.449809"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('qzwang@ku.edu') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Qiaozhi Wang"], ["email", "qzwang@ku.edu"], ["password_digest", "$2a$10$GuPFIe3uuF2Jk1VWuL/mOunhRfHiXDNXhDlzgZhtJ6jgPA7D31uG6"], ["admin", "t"], ["created_at", "2016-02-22 20:19:06.535484"], ["updated_at", "2016-02-22 20:19:06.535484"]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-1@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Duncan Pollich"], ["email", "example-1@railstutorial.org"], ["password_digest", "$2a$10$qPHIUK4PFMA31lD7/dgoQurq1qeyl0qsNiyjo.6E5WUdP3exlNfD2"], ["created_at", "2016-02-22 20:19:06.894270"], ["updated_at", "2016-02-22 20:19:06.894270"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-2@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Simone Wilderman"], ["email", "example-2@railstutorial.org"], ["password_digest", "$2a$10$SjFrEbPmDCS6xlEfVcfUm.Jabdq4Fad5SVkQZQBG9M9W7dnwgICmm"], ["created_at", "2016-02-22 20:19:06.986089"], ["updated_at", "2016-02-22 20:19:06.986089"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-3@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Rodolfo Rempel"], ["email", "example-3@railstutorial.org"], ["password_digest", "$2a$10$gQQ1mKZJNrAa.fWMYfzuGe4IL.bS2MhzZ//VW1mdQyQpvbpbqQ3qu"], ["created_at", "2016-02-22 20:19:07.075196"], ["updated_at", "2016-02-22 20:19:07.075196"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-4@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Macy Turner"], ["email", "example-4@railstutorial.org"], ["password_digest", "$2a$10$RIksL7YNvaoEyUhGXJCyD.0a35jU3i6W/bjJWyMdMkZG2PTmxxel6"], ["created_at", "2016-02-22 20:19:07.161418"], ["updated_at", "2016-02-22 20:19:07.161418"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-5@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ali Hahn"], ["email", "example-5@railstutorial.org"], ["password_digest", "$2a$10$LMIeXLsyZDs3KnUfEIpZzO3lLzH51icZ63/wg.lq/hMrmZ5k4.ddm"], ["created_at", "2016-02-22 20:19:07.250305"], ["updated_at", "2016-02-22 20:19:07.250305"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-6@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Grayson Sanford"], ["email", "example-6@railstutorial.org"], ["password_digest", "$2a$10$bfkKC5HYUCWIJ9WtUahCpenFxdPGT3G1bkor9d7X9TkElh.kBhYMK"], ["created_at", "2016-02-22 20:19:07.342091"], ["updated_at", "2016-02-22 20:19:07.342091"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-7@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Taya Gleason"], ["email", "example-7@railstutorial.org"], ["password_digest", "$2a$10$C9/9fF60DEv0eUwb7b.pduXQALNvRfcNCUaPCP4sBwTWosTLBkzEW"], ["created_at", "2016-02-22 20:19:07.434735"], ["updated_at", "2016-02-22 20:19:07.434735"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-8@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Erick Altenwerth Sr."], ["email", "example-8@railstutorial.org"], ["password_digest", "$2a$10$DfC0/tNzB2UsYWKgm9.VY.rtZmsdpEmWOpiGX8SuB1/YpEEvi5jo2"], ["created_at", "2016-02-22 20:19:07.523878"], ["updated_at", "2016-02-22 20:19:07.523878"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-9@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Shanel Abernathy"], ["email", "example-9@railstutorial.org"], ["password_digest", "$2a$10$N668Izok9AcX5CjrOAacWuWoERRHGKuFsmbjuPWQVJU.pIcWrMA3e"], ["created_at", "2016-02-22 20:19:07.612343"], ["updated_at", "2016-02-22 20:19:07.612343"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-10@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Tess Stracke"], ["email", "example-10@railstutorial.org"], ["password_digest", "$2a$10$4kUOXBHQxUu23AOdU4u0..DynrG5BZoo/xoPBr3ECYrBb42X8GSJ2"], ["created_at", "2016-02-22 20:19:07.702695"], ["updated_at", "2016-02-22 20:19:07.702695"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-11@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Emily Hauck"], ["email", "example-11@railstutorial.org"], ["password_digest", "$2a$10$XWdpRpicX982wLhAnxeyA.91TAf5b.QZEaNFY298ClNO2JP4H2FZm"], ["created_at", "2016-02-22 20:19:07.792326"], ["updated_at", "2016-02-22 20:19:07.792326"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-12@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dr. Hailey Beer"], ["email", "example-12@railstutorial.org"], ["password_digest", "$2a$10$GY0d1PpI8cX8yOzLzkLshunJG90HfZT2.pOgyB70WPlxciX/ZcPZG"], ["created_at", "2016-02-22 20:19:07.881741"], ["updated_at", "2016-02-22 20:19:07.881741"]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-13@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ayla Reynolds"], ["email", "example-13@railstutorial.org"], ["password_digest", "$2a$10$PmWI/6RERnavG/NdROueUeYD0WEZLoh6VlLqDgxjuTqm3mQYqv3LC"], ["created_at", "2016-02-22 20:19:07.971037"], ["updated_at", "2016-02-22 20:19:07.971037"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-14@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Alvah Hickle"], ["email", "example-14@railstutorial.org"], ["password_digest", "$2a$10$a3QPWISOpgae8trn1ji0OutJ0WVxV/c3yrP4lLrBaDZQxMSldaqu2"], ["created_at", "2016-02-22 20:19:08.061039"], ["updated_at", "2016-02-22 20:19:08.061039"]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-15@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Angela Schimmel"], ["email", "example-15@railstutorial.org"], ["password_digest", "$2a$10$QnUO87qf/pAwRagnLOy4m.9FPwpQCu8I.rL2L7CBgaqS0yuYZuSeW"], ["created_at", "2016-02-22 20:19:08.146267"], ["updated_at", "2016-02-22 20:19:08.146267"]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-16@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Roma Lynch"], ["email", "example-16@railstutorial.org"], ["password_digest", "$2a$10$WqrciSeEsGet0/rgnJvVJeBTpnAhghmzKrVoWJHzT912wgsB1Ki8O"], ["created_at", "2016-02-22 20:19:08.237494"], ["updated_at", "2016-02-22 20:19:08.237494"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-17@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Mrs. Randi Block"], ["email", "example-17@railstutorial.org"], ["password_digest", "$2a$10$hyekf.yx0WOJSYQmlZJ.Cu8ANgg48pa3eln.ZoJa4PP9fMQlE16se"], ["created_at", "2016-02-22 20:19:08.326941"], ["updated_at", "2016-02-22 20:19:08.326941"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-18@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Graciela Blick Jr."], ["email", "example-18@railstutorial.org"], ["password_digest", "$2a$10$39wsv0n1eu2dwXEaCp3uFOHg4ATX9hRtvzEcjt3nQqeB/FuTPCZai"], ["created_at", "2016-02-22 20:19:08.417184"], ["updated_at", "2016-02-22 20:19:08.417184"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-19@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Giovanni Gislason"], ["email", "example-19@railstutorial.org"], ["password_digest", "$2a$10$q3saAH.1.NsA1UYsA/y.s..L7n1wajkdCXhYoKnQ6K9yuZExCEBe2"], ["created_at", "2016-02-22 20:19:08.506774"], ["updated_at", "2016-02-22 20:19:08.506774"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-20@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Mr. Barry Marvin"], ["email", "example-20@railstutorial.org"], ["password_digest", "$2a$10$xuumnFZdF3lvOyLMVTaDZeHB0bHIH7NXjgHjH8SLFgcxkG3VvEtwW"], ["created_at", "2016-02-22 20:19:08.595784"], ["updated_at", "2016-02-22 20:19:08.595784"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-21@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Chanel Purdy"], ["email", "example-21@railstutorial.org"], ["password_digest", "$2a$10$jFo7Sa8w93AermepYKI/Kesxi4Ft/Q7VPTSsOsbVip5flg54Hl8VW"], ["created_at", "2016-02-22 20:19:08.683571"], ["updated_at", "2016-02-22 20:19:08.683571"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-22@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Mr. Mona Lowe"], ["email", "example-22@railstutorial.org"], ["password_digest", "$2a$10$vaaF8IflOn7T8XTeakjMyuXpyGLnFLAG60zaCfIl7jc/OunoVQcI."], ["created_at", "2016-02-22 20:19:08.776782"], ["updated_at", "2016-02-22 20:19:08.776782"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-23@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Karson McKenzie"], ["email", "example-23@railstutorial.org"], ["password_digest", "$2a$10$W952H5ZVhsNFru8cVEjqL.1F7eei.oNiU8B.nNkmeII3NvloEI1/m"], ["created_at", "2016-02-22 20:19:08.868748"], ["updated_at", "2016-02-22 20:19:08.868748"]]
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-24@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Josianne Wiza Sr."], ["email", "example-24@railstutorial.org"], ["password_digest", "$2a$10$1LQi5zQ7CqosnaaoVQ4VRO8kCTFfnmExkJF7kzfHmG7gzyyXx19uG"], ["created_at", "2016-02-22 20:19:08.956951"], ["updated_at", "2016-02-22 20:19:08.956951"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-25@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Zachery Moen DDS"], ["email", "example-25@railstutorial.org"], ["password_digest", "$2a$10$.9YrkR9YY6.Fq855RhdI7uXXxvxaachrRqxQs3tnjcBqVCpLgo9pa"], ["created_at", "2016-02-22 20:19:09.043422"], ["updated_at", "2016-02-22 20:19:09.043422"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-26@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dawn Fay I"], ["email", "example-26@railstutorial.org"], ["password_digest", "$2a$10$y2zq4NL09VW4AiIFoYbQ2ebKjQpxuqXyCJTXsMSSXwfvCXNDyX9Xi"], ["created_at", "2016-02-22 20:19:09.130786"], ["updated_at", "2016-02-22 20:19:09.130786"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-27@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Adam Hudson DDS"], ["email", "example-27@railstutorial.org"], ["password_digest", "$2a$10$Q.o8Pc6ziTY499yEJQodUO5Vaw/Ja77YtBT2cjvSnKkZa77ivmrAC"], ["created_at", "2016-02-22 20:19:09.218929"], ["updated_at", "2016-02-22 20:19:09.218929"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-28@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Soledad Christiansen"], ["email", "example-28@railstutorial.org"], ["password_digest", "$2a$10$YT2KlwH6JNWQWXGvT4AHiO3nsQweudW5JeG0rRrwQxsIi6wcTxJg6"], ["created_at", "2016-02-22 20:19:09.308109"], ["updated_at", "2016-02-22 20:19:09.308109"]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-29@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Eduardo Tromp"], ["email", "example-29@railstutorial.org"], ["password_digest", "$2a$10$ppgQmDt0W4GgiBFEU6BZ5.3wPS5yBIN4wxm7YtUlGBNuGVaVjjiom"], ["created_at", "2016-02-22 20:19:09.396950"], ["updated_at", "2016-02-22 20:19:09.396950"]]
+  [1m[36m (6.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-30@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cletus Moen"], ["email", "example-30@railstutorial.org"], ["password_digest", "$2a$10$aAxrmnbdg/9iN9ADetNWnOiiP/rPliUYh6Lqeht0yCVkrjXZmInFe"], ["created_at", "2016-02-22 20:19:09.484016"], ["updated_at", "2016-02-22 20:19:09.484016"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-31@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Easter Conroy"], ["email", "example-31@railstutorial.org"], ["password_digest", "$2a$10$AyV.4rNZZuoTVXeCam7xAeL6pdWVopiWBz3sm1WwUuamTVbakTGtW"], ["created_at", "2016-02-22 20:19:09.573086"], ["updated_at", "2016-02-22 20:19:09.573086"]]
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-32@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Alex Metz"], ["email", "example-32@railstutorial.org"], ["password_digest", "$2a$10$bvsu9ILiZqWgXvnCf9ZF/.0b.MlAZR2UWhPwH6Ewn2TFQjRRu6gkS"], ["created_at", "2016-02-22 20:19:09.657462"], ["updated_at", "2016-02-22 20:19:09.657462"]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-33@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Oswald Buckridge"], ["email", "example-33@railstutorial.org"], ["password_digest", "$2a$10$metgSsmdHQtsL5VQfYR/ge9Uq5mZXAytX15sOW.9lm39bsXII8GKC"], ["created_at", "2016-02-22 20:19:09.747533"], ["updated_at", "2016-02-22 20:19:09.747533"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-34@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Lempi Rogahn"], ["email", "example-34@railstutorial.org"], ["password_digest", "$2a$10$.8fmGgak8wBic3hDMzCnL.yvDFAaf0lXrMFk1PRE3KtKCP7yBxLrq"], ["created_at", "2016-02-22 20:19:09.837274"], ["updated_at", "2016-02-22 20:19:09.837274"]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-35@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Lolita Connelly"], ["email", "example-35@railstutorial.org"], ["password_digest", "$2a$10$OLMd9UNwwVRp6tdgtKicneuT9KLvPEqo1X1Gs3wpBxbSihBHzYsBS"], ["created_at", "2016-02-22 20:19:09.925222"], ["updated_at", "2016-02-22 20:19:09.925222"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-36@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Anika Kuhn DVM"], ["email", "example-36@railstutorial.org"], ["password_digest", "$2a$10$Kwn7NLF9tRvDz3/jM/Q95u2qx9QS293/qw2U4yvVVZUAemdg8pzJe"], ["created_at", "2016-02-22 20:19:10.012809"], ["updated_at", "2016-02-22 20:19:10.012809"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-37@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Mr. Miguel Wiegand"], ["email", "example-37@railstutorial.org"], ["password_digest", "$2a$10$4i4rERo20nd4yCd8gLuoRu7jrwdfwTKlJt/0r5eFRYgwqGxYpcpOe"], ["created_at", "2016-02-22 20:19:10.096279"], ["updated_at", "2016-02-22 20:19:10.096279"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-38@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Mr. Adolfo Tremblay"], ["email", "example-38@railstutorial.org"], ["password_digest", "$2a$10$nircV/dqjaXDlKDdI8tzOOHqPPOUin6KXSH5crSlwkISjQRDBgouO"], ["created_at", "2016-02-22 20:19:10.185801"], ["updated_at", "2016-02-22 20:19:10.185801"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-39@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Wilhelmine Schiller II"], ["email", "example-39@railstutorial.org"], ["password_digest", "$2a$10$v59tsKjS.GYORhleIReCK.k1zaNY.UlCrk3suAsF4Pd4k4MvJnQAW"], ["created_at", "2016-02-22 20:19:10.272368"], ["updated_at", "2016-02-22 20:19:10.272368"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-40@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Valentine Legros"], ["email", "example-40@railstutorial.org"], ["password_digest", "$2a$10$otVEnCumHqXntEfPHrn6dO7/nXXZlVrcY02xKE1zUshLqpY4w9qIi"], ["created_at", "2016-02-22 20:19:10.359809"], ["updated_at", "2016-02-22 20:19:10.359809"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-41@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Verner Little"], ["email", "example-41@railstutorial.org"], ["password_digest", "$2a$10$E7IIl6HgZkXqfFVC6MVnhuSZ03EQTn5/OcjgD/JwfDnG2tWR6Bzp2"], ["created_at", "2016-02-22 20:19:10.448583"], ["updated_at", "2016-02-22 20:19:10.448583"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-42@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Mr. Angela Beer"], ["email", "example-42@railstutorial.org"], ["password_digest", "$2a$10$uLExQWnRz4PoDwUFabgmrOqtpsFUt0depPsW3fdfPIwGDmm9SSclG"], ["created_at", "2016-02-22 20:19:10.536374"], ["updated_at", "2016-02-22 20:19:10.536374"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-43@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Miss Cassie Kirlin"], ["email", "example-43@railstutorial.org"], ["password_digest", "$2a$10$IH0eoJZRidyJ8R5y4jBlyuziZFwl6FxA4XSlVK1zuOjAsVSV3r7Cq"], ["created_at", "2016-02-22 20:19:10.625435"], ["updated_at", "2016-02-22 20:19:10.625435"]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-44@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Kasandra Reichert"], ["email", "example-44@railstutorial.org"], ["password_digest", "$2a$10$GiJhA4KCZ0t036FCw4EOR.GXhDRcSugwDWc8j8Z6p4y8/xxKc41CW"], ["created_at", "2016-02-22 20:19:10.712040"], ["updated_at", "2016-02-22 20:19:10.712040"]]
+  [1m[36m (37.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-45@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ms. Turner Mueller"], ["email", "example-45@railstutorial.org"], ["password_digest", "$2a$10$GnNq3wVKalint.EDDVoU6OVERRwXE3lBvMXirQi2quQ4KqZwxVT3e"], ["created_at", "2016-02-22 20:19:10.829468"], ["updated_at", "2016-02-22 20:19:10.829468"]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-46@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Roel Bayer"], ["email", "example-46@railstutorial.org"], ["password_digest", "$2a$10$Wf.BUYrfjoeo4sb2TkOm9.53D274s37QWb5q2tUTjehBSOTB5qXH6"], ["created_at", "2016-02-22 20:19:10.917176"], ["updated_at", "2016-02-22 20:19:10.917176"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-47@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Simeon Rippin"], ["email", "example-47@railstutorial.org"], ["password_digest", "$2a$10$jwYSCAxRJ5/cwIjkoXYPKuswG7OfGejz4aQlVvBf.e5jYhirRRoTO"], ["created_at", "2016-02-22 20:19:11.003847"], ["updated_at", "2016-02-22 20:19:11.003847"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-48@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Rhea Kemmer"], ["email", "example-48@railstutorial.org"], ["password_digest", "$2a$10$7nJM5QdBJXIRFkTTX7UpGeIV4fKrva1fmZpDGZLH9Di1YvGaZPuTi"], ["created_at", "2016-02-22 20:19:11.089517"], ["updated_at", "2016-02-22 20:19:11.089517"]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-49@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Gretchen Kris"], ["email", "example-49@railstutorial.org"], ["password_digest", "$2a$10$mdrh4leWZTQU2eH3NO912Ou7Ud0K7tUn/XSzQJrqRdp39r7wimZdK"], ["created_at", "2016-02-22 20:19:11.178103"], ["updated_at", "2016-02-22 20:19:11.178103"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-50@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Vincenzo Hackett"], ["email", "example-50@railstutorial.org"], ["password_digest", "$2a$10$ArlhciyWXLtvOUI6Msq7yuSG2mQxaP0RSFIpL4eK3fX/qgZiGKqhO"], ["created_at", "2016-02-22 20:19:11.266236"], ["updated_at", "2016-02-22 20:19:11.266236"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-51@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Shanon Dickinson"], ["email", "example-51@railstutorial.org"], ["password_digest", "$2a$10$wmvXuAicayndWNLjPYH7deOcKAbdXItyy40/0yQNtOADhRTAEmV5e"], ["created_at", "2016-02-22 20:19:11.354141"], ["updated_at", "2016-02-22 20:19:11.354141"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-52@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Derrick Hartmann"], ["email", "example-52@railstutorial.org"], ["password_digest", "$2a$10$0H/XoQ69g9.izeTglgkdReyqoWXaE.eRLfEXG1vQMOQlZ13yrye62"], ["created_at", "2016-02-22 20:19:11.439833"], ["updated_at", "2016-02-22 20:19:11.439833"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-53@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Blair Wehner II"], ["email", "example-53@railstutorial.org"], ["password_digest", "$2a$10$Q8zoEpqJRgIcaaOswzkJGuMPPz5NqqHvmBDyGfkDAnXcuAJyi0aOm"], ["created_at", "2016-02-22 20:19:11.529431"], ["updated_at", "2016-02-22 20:19:11.529431"]]
+  [1m[36m (222.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-54@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Misael Price"], ["email", "example-54@railstutorial.org"], ["password_digest", "$2a$10$nhvK9ajDLSIpW0aADDOSZuo30HMj6IV0PDX0f4mB/BYYvaRh4foRq"], ["created_at", "2016-02-22 20:19:11.833033"], ["updated_at", "2016-02-22 20:19:11.833033"]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-55@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Myrtie Barrows"], ["email", "example-55@railstutorial.org"], ["password_digest", "$2a$10$tM0/5tBQc3.KPjPTpglJ.O4pKuuUfr1avRrRVRRT5aKnHqxd0CEdO"], ["created_at", "2016-02-22 20:19:11.919496"], ["updated_at", "2016-02-22 20:19:11.919496"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-56@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Alisha Bashirian"], ["email", "example-56@railstutorial.org"], ["password_digest", "$2a$10$4CTMFRoDP3MGyWkrTfPQCeUZtQ0Cf59R06uDiCbm2otf69j9HfLzC"], ["created_at", "2016-02-22 20:19:12.007314"], ["updated_at", "2016-02-22 20:19:12.007314"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-57@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Weldon Bogisich"], ["email", "example-57@railstutorial.org"], ["password_digest", "$2a$10$fdn3YNjh7ndQbr8Kq65tuuncKMMubb/7zTgqfkOw4S56E0lwdUV2."], ["created_at", "2016-02-22 20:19:12.094686"], ["updated_at", "2016-02-22 20:19:12.094686"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-58@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Rickey Welch"], ["email", "example-58@railstutorial.org"], ["password_digest", "$2a$10$n9dSYX8huiNtSnWKviKo0O.Oa3Zw3pdDxiVNidfrBEnpo/RH44oUe"], ["created_at", "2016-02-22 20:19:12.185646"], ["updated_at", "2016-02-22 20:19:12.185646"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-59@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cora Maggio"], ["email", "example-59@railstutorial.org"], ["password_digest", "$2a$10$H3AG50jQuAnNwr2qL2oR1uA6jR5QU5STnoNcuPXSF2RtNaA.6IL0K"], ["created_at", "2016-02-22 20:19:12.276147"], ["updated_at", "2016-02-22 20:19:12.276147"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-60@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Zane Walker"], ["email", "example-60@railstutorial.org"], ["password_digest", "$2a$10$4vgcwEkEC1H7bKHGEnY1TeipcFzFEY/aZrsz7hV5O8Qn/y3D73bl2"], ["created_at", "2016-02-22 20:19:12.364271"], ["updated_at", "2016-02-22 20:19:12.364271"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-61@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Reynold Lang"], ["email", "example-61@railstutorial.org"], ["password_digest", "$2a$10$WE1IkMo14UXy6s0OApRLh.XsLsM0Endow98tAXEsiivrRgWmd8AE."], ["created_at", "2016-02-22 20:19:12.453383"], ["updated_at", "2016-02-22 20:19:12.453383"]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-62@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Lynn Grady"], ["email", "example-62@railstutorial.org"], ["password_digest", "$2a$10$h0bklDIihvdvzVwK/RVmsOn3dbIhpuhWWdM/D92qA6.mq1Dda4Tuy"], ["created_at", "2016-02-22 20:19:12.543270"], ["updated_at", "2016-02-22 20:19:12.543270"]]
+  [1m[36m (10.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-63@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Selmer Grimes"], ["email", "example-63@railstutorial.org"], ["password_digest", "$2a$10$jDVyfeLkU93om91bg.HVmeBy6KXKULAcpU7sQYF2SSXdyvqvzRbZm"], ["created_at", "2016-02-22 20:19:12.633418"], ["updated_at", "2016-02-22 20:19:12.633418"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-64@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Alyson Murray"], ["email", "example-64@railstutorial.org"], ["password_digest", "$2a$10$WVjmt31GPf.eIBCZXTUyc.nNvP0bCuwDEvsAloSve06FR8N80TybW"], ["created_at", "2016-02-22 20:19:12.724872"], ["updated_at", "2016-02-22 20:19:12.724872"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-65@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Gerardo Hudson II"], ["email", "example-65@railstutorial.org"], ["password_digest", "$2a$10$GLiFqWgC.BzmJ5MolGCdS.NVeS2vWw5KWoAGTQnRsUfs3jG5oXD6K"], ["created_at", "2016-02-22 20:19:12.812013"], ["updated_at", "2016-02-22 20:19:12.812013"]]
+  [1m[36m (9.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-66@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Erika Johnston"], ["email", "example-66@railstutorial.org"], ["password_digest", "$2a$10$pmDCiJhYVfgKMtcVomhogONGSkVtTAfDSDfVFDlvuaL7ot9Evedvy"], ["created_at", "2016-02-22 20:19:12.905992"], ["updated_at", "2016-02-22 20:19:12.905992"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-67@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Sister Bednar PhD"], ["email", "example-67@railstutorial.org"], ["password_digest", "$2a$10$HDNyfGY4o1sV.095L0W6EuS8fXc5eHtuDPYSbywESjV4uM7LWQgje"], ["created_at", "2016-02-22 20:19:12.993910"], ["updated_at", "2016-02-22 20:19:12.993910"]]
+  [1m[36m (10.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-68@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Caitlyn Kunze"], ["email", "example-68@railstutorial.org"], ["password_digest", "$2a$10$sFyytUd4n.WV95Jr7u5pqeBCd69LFFLKcXCDAjh0/ReZ7BA7Fydoa"], ["created_at", "2016-02-22 20:19:13.084916"], ["updated_at", "2016-02-22 20:19:13.084916"]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-69@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Karlee Mayer"], ["email", "example-69@railstutorial.org"], ["password_digest", "$2a$10$4oMIH2yZRB4Q9zax5wMCqu29uLAWACzfuuf8F6817qe3sRu0z197O"], ["created_at", "2016-02-22 20:19:13.170964"], ["updated_at", "2016-02-22 20:19:13.170964"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-70@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Melvina Davis"], ["email", "example-70@railstutorial.org"], ["password_digest", "$2a$10$KUUDT0ObzFdZHOx4O5FgWOfEaZO03Xm5cAYNdiLSLA0XfmWJDj45m"], ["created_at", "2016-02-22 20:19:13.262025"], ["updated_at", "2016-02-22 20:19:13.262025"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-71@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Alessandra Klocko"], ["email", "example-71@railstutorial.org"], ["password_digest", "$2a$10$N2iIqJUI9V/CcgXOVT8rpuiHWrYphGvEt1lcgZyQ2Wv41haA2Lzzq"], ["created_at", "2016-02-22 20:19:13.353900"], ["updated_at", "2016-02-22 20:19:13.353900"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-72@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Heath Lueilwitz"], ["email", "example-72@railstutorial.org"], ["password_digest", "$2a$10$AsyVNQu4Y6hqyB/jNwNjK.bQ1dw8ttJiHOy9IKwN6itx6gN04ofea"], ["created_at", "2016-02-22 20:19:13.443760"], ["updated_at", "2016-02-22 20:19:13.443760"]]
+  [1m[36m (16.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-73@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Wilhelm Rempel Jr."], ["email", "example-73@railstutorial.org"], ["password_digest", "$2a$10$C6t3r0U1nCZNF14Xfqe0AejAwG3vskdfWo6XELACQt5.me41MTl7G"], ["created_at", "2016-02-22 20:19:13.542774"], ["updated_at", "2016-02-22 20:19:13.542774"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-74@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Daphney Donnelly"], ["email", "example-74@railstutorial.org"], ["password_digest", "$2a$10$m6prLJsFOQi35pWSbITj6u/JLOzIZn7wBoFqGRZ2Jn9VYOckzwa8a"], ["created_at", "2016-02-22 20:19:13.631731"], ["updated_at", "2016-02-22 20:19:13.631731"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-75@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Letitia Conn Sr."], ["email", "example-75@railstutorial.org"], ["password_digest", "$2a$10$6XPk8PID3Mus5NrzhKtnBu9TsPkruLSzHebx3USJQY5xeWAVLrJYK"], ["created_at", "2016-02-22 20:19:13.720625"], ["updated_at", "2016-02-22 20:19:13.720625"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-76@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Odie Haag V"], ["email", "example-76@railstutorial.org"], ["password_digest", "$2a$10$mcPhdd/ZN4zZxaz9Ag/hmeVUvqsOGzH.bgDFeOiS0CukA/gNpACNm"], ["created_at", "2016-02-22 20:19:13.809223"], ["updated_at", "2016-02-22 20:19:13.809223"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-77@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dawn Armstrong"], ["email", "example-77@railstutorial.org"], ["password_digest", "$2a$10$nFiknKrI675VhTYLvPBBvekOOviqgiFLOKQLk2bP1TEfAOIGmDo6i"], ["created_at", "2016-02-22 20:19:13.895172"], ["updated_at", "2016-02-22 20:19:13.895172"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-78@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Deon Batz"], ["email", "example-78@railstutorial.org"], ["password_digest", "$2a$10$moL1Ec5jO2VzQ2plMyn9AOSz40dShLOdQds6vQ26eBs3PkjBzz17u"], ["created_at", "2016-02-22 20:19:13.986795"], ["updated_at", "2016-02-22 20:19:13.986795"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-79@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Neva Rice"], ["email", "example-79@railstutorial.org"], ["password_digest", "$2a$10$iQy2W5Bfce2cf3uU9P.BYuJroLf3pQ49JNQ.W8nP4RjdUe96cSN0C"], ["created_at", "2016-02-22 20:19:14.075198"], ["updated_at", "2016-02-22 20:19:14.075198"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-80@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Whitney Fay"], ["email", "example-80@railstutorial.org"], ["password_digest", "$2a$10$faTJiBAqLZ8FdhLj62kaBudJMgGqJbBRmj4v4pBoeViMFaUkpec3a"], ["created_at", "2016-02-22 20:19:14.162281"], ["updated_at", "2016-02-22 20:19:14.162281"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-81@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Kara Frami"], ["email", "example-81@railstutorial.org"], ["password_digest", "$2a$10$QiXfpZR45czbXhqahrllRepsXo2AEYrP9QlM/tDYZGi5ze5W69HK2"], ["created_at", "2016-02-22 20:19:14.253816"], ["updated_at", "2016-02-22 20:19:14.253816"]]
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-82@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Lenore Aufderhar"], ["email", "example-82@railstutorial.org"], ["password_digest", "$2a$10$dxC0rwAwnQpiYMSrn7BUWu6s0THLCJ9t2nwepEt/34xoWUxGpyIgC"], ["created_at", "2016-02-22 20:19:14.343860"], ["updated_at", "2016-02-22 20:19:14.343860"]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-83@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Clementina Smitham"], ["email", "example-83@railstutorial.org"], ["password_digest", "$2a$10$mOIUrLldjvutZ7ML.NmHfeQyoMdAVZX5Lk0lz5CXlYw6h2XKgidN2"], ["created_at", "2016-02-22 20:19:14.435691"], ["updated_at", "2016-02-22 20:19:14.435691"]]
+  [1m[36m (11.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-84@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Mr. Tamia Wolf"], ["email", "example-84@railstutorial.org"], ["password_digest", "$2a$10$/.qlAUF8Y/0lQzUJNgyPeu2Mv/iEbusgtLHxxoAAbKc5f82Hqtm.2"], ["created_at", "2016-02-22 20:19:14.527134"], ["updated_at", "2016-02-22 20:19:14.527134"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-85@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Eloisa O'Connell"], ["email", "example-85@railstutorial.org"], ["password_digest", "$2a$10$Um7qqC0RkR605PCoC1dRZ./L1cQePYicOo2LJMGzFRZm0jlAXs/3e"], ["created_at", "2016-02-22 20:19:14.614021"], ["updated_at", "2016-02-22 20:19:14.614021"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-86@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Price Goodwin V"], ["email", "example-86@railstutorial.org"], ["password_digest", "$2a$10$dBnFxpZSNHMehDnqyqOBZeVANn9dbhxkUsEfWGqIdYSkQFLuowyrG"], ["created_at", "2016-02-22 20:19:14.700929"], ["updated_at", "2016-02-22 20:19:14.700929"]]
+  [1m[36m (11.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-87@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Bruce Champlin III"], ["email", "example-87@railstutorial.org"], ["password_digest", "$2a$10$prjOvhP68sXiBWsxYRy6m.MACf0A0WVCwAIBhtulm3h4.X7n4WX/a"], ["created_at", "2016-02-22 20:19:14.790573"], ["updated_at", "2016-02-22 20:19:14.790573"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-88@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jalon Schuster"], ["email", "example-88@railstutorial.org"], ["password_digest", "$2a$10$CGfufvGFNi0YDYyide0bG.vAIbaSGniInlMlxBMSjijAuR3smprOW"], ["created_at", "2016-02-22 20:19:14.878574"], ["updated_at", "2016-02-22 20:19:14.878574"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-89@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Garland Gleichner"], ["email", "example-89@railstutorial.org"], ["password_digest", "$2a$10$gdVfNSMyFZlLJu1d8W9ZKeGU0PwtE4euZAuuQV1Vu3h/PEV9s/Li."], ["created_at", "2016-02-22 20:19:14.969132"], ["updated_at", "2016-02-22 20:19:14.969132"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-90@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Fabiola Ernser II"], ["email", "example-90@railstutorial.org"], ["password_digest", "$2a$10$45SjzrKpkFh287tUAaTMDedPXyG4z1GZWX5wflPgUc1cYsEmefMYS"], ["created_at", "2016-02-22 20:19:15.057112"], ["updated_at", "2016-02-22 20:19:15.057112"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-91@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Tess Hills"], ["email", "example-91@railstutorial.org"], ["password_digest", "$2a$10$2grzXRryysWWLsZoDHCyfuaFspRpoqLVEFxlgoRqWMpTsaPvBBEma"], ["created_at", "2016-02-22 20:19:15.144800"], ["updated_at", "2016-02-22 20:19:15.144800"]]
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-92@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Randal Waters"], ["email", "example-92@railstutorial.org"], ["password_digest", "$2a$10$5P81GZ5xh2EGTkcejWT8E.hajNZoBXfvGwiaZ6wtF7baX05VOSW2O"], ["created_at", "2016-02-22 20:19:15.233423"], ["updated_at", "2016-02-22 20:19:15.233423"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-93@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Justen Adams"], ["email", "example-93@railstutorial.org"], ["password_digest", "$2a$10$tlpY6XHfNZKYOWB.U9Lwm.TduxzqYxDaBe1qssCy7Vkf3ki6HdFZm"], ["created_at", "2016-02-22 20:19:15.321778"], ["updated_at", "2016-02-22 20:19:15.321778"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-94@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Zena Cruickshank"], ["email", "example-94@railstutorial.org"], ["password_digest", "$2a$10$dNGpzU/FFRhcp9jRiCZO/OTO5fPOE6VqPSj.6DcqmURDpTfPiX/YK"], ["created_at", "2016-02-22 20:19:15.410218"], ["updated_at", "2016-02-22 20:19:15.410218"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-95@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Lorenz Thompson"], ["email", "example-95@railstutorial.org"], ["password_digest", "$2a$10$C2xEihelUYrwCVOJH34XQ.ZOLUpuBHjt8p.6RC9PfVBKDZhDYfQqi"], ["created_at", "2016-02-22 20:19:15.497870"], ["updated_at", "2016-02-22 20:19:15.497870"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-96@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Miss Tania Hoppe"], ["email", "example-96@railstutorial.org"], ["password_digest", "$2a$10$iTktGrJi8/Ns4zifEygaTezz2vdZR2ogike1rF1hKAWdrgr9xxekq"], ["created_at", "2016-02-22 20:19:15.584931"], ["updated_at", "2016-02-22 20:19:15.584931"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-97@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Eloise Rodriguez Jr."], ["email", "example-97@railstutorial.org"], ["password_digest", "$2a$10$LFx4RGuT3zYtzQhDG89qX.Kga54/0x8TpgcSgB68mBRqcePHCrTB2"], ["created_at", "2016-02-22 20:19:15.674098"], ["updated_at", "2016-02-22 20:19:15.674098"]]
+  [1m[36m (9.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-98@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Geraldine Schiller III"], ["email", "example-98@railstutorial.org"], ["password_digest", "$2a$10$QXja/OWH1jGCQWXry5kNSeADITzARPvCJz.bN/ZC.liSfjTQ0SqEO"], ["created_at", "2016-02-22 20:19:15.761119"], ["updated_at", "2016-02-22 20:19:15.761119"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('example-99@railstutorial.org') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Morris Miller PhD"], ["email", "example-99@railstutorial.org"], ["password_digest", "$2a$10$WQ5vqaApkviHdR5JKYNJZOfkuXK4AX0hon/2w4bo5/rNAxfz4.Fke"], ["created_at", "2016-02-22 20:19:15.846671"], ["updated_at", "2016-02-22 20:19:15.846671"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:20:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (10347.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 10565ms (Views: 10550.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-9877218632031d8fc57841e2817e29a85aea33a8e09cda1fd46bde97827298b4.css?body=1" for 129.237.92.212 at 2016-02-22 20:20:18 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:20:18 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:20:33 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 165ms (Views: 164.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/maps" for 129.237.92.212 at 2016-02-22 20:20:36 +0000
+Processing by MapsController#index as HTML
+  [1m[35mMap Load (0.3ms)[0m  SELECT "maps".* FROM "maps"
+  Rendered maps/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 114ms (Views: 98.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/maps" for 129.237.92.212 at 2016-02-22 20:21:37 +0000
+Processing by MapsController#index as HTML
+  [1m[36mMap Load (0.3ms)[0m  [1mSELECT "maps".* FROM "maps"[0m
+  Rendered maps/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2003ms (Views: 2001.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom.self-664e10f6b92a0d226e227a033893b25b459eb5d1f4f831560739ed0675bbe38f.css?body=1" for 129.237.92.212 at 2016-02-22 20:21:39 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:21:39 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:21:39 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:21:40 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:21:43 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:22:28 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 110ms (Views: 109.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:22:29 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:22:29 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 97ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:22:29 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/underscore-min.map" for 129.237.92.212 at 2016-02-22 20:22:56 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.1) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.1) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.1) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (75.1ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:23:24 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+Sass::SyntaxError (Invalid CSS after "  }": expected "{", was "}"):
+  app/assets/stylesheets/custom.css.scss:195
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__718865618514329844_70055150405220'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (10.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (74.1ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:23:47 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms)
+
+Sass::SyntaxError (Invalid CSS after "  }": expected "{", was "}"):
+  app/assets/stylesheets/custom.css.scss:195
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__718865618514329844_70055150405220'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (9.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (64.8ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:24:16 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+Sass::SyntaxError (Invalid CSS after "  }": expected "{", was "}"):
+  app/assets/stylesheets/custom.css.scss:195
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__718865618514329844_70055150405220'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (67.6ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:24:32 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 174ms (Views: 173.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-664e10f6b92a0d226e227a033893b25b459eb5d1f4f831560739ed0675bbe38f.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:32 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:24:33 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:24:48 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1650ms (Views: 1649.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-a643a7fafb277ae8ab48ffcef63d4a9d41b04244c276f991d53a9bac24469e16.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:24:50 +0000
+
+
+Started GET "/assets/underscore-min.map" for 129.237.92.212 at 2016-02-22 20:25:15 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.1) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.1) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.1) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (55.2ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:25:39 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1604ms (Views: 1603.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/custom.self-2675572e38524c15c56430dc87e272d85410985d7bd478acf0f27c051aa4e0af.css?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:25:41 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:26:42 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1534ms (Views: 1533.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-cc04129031e22413097fb45734051afe46983db7f237aaf0272d74286bfab5ba.css?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:44 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:26:45 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:27:18 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1710ms (Views: 1709.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-60fbbe6b0f7a6a3a9648c65256ee9289d6d70301569f262c6cd5934038b4a87a.css?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:20 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:27:21 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:29:56 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1545ms (Views: 1544.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-396b65f6d4370fead1c3017e9eb2f3ecce20b9f8d5b6976520b5a9f246bb87a0.css?body=1" for 129.237.92.212 at 2016-02-22 20:29:57 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:29:57 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:29:58 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:31:04 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1472ms (Views: 1471.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-6ae0a7afdac91583b948d124dd1106742bfa8e16bf1d44c9603e922f97cc13b6.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:05 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/scaffolds.self-d63cf1b8af4b96fd4ee00995c255afcfa26d818424cfcda1af1589e0424be7c6.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:31:06 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 157ms (Views: 156.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/custom.self-396b65f6d4370fead1c3017e9eb2f3ecce20b9f8d5b6976520b5a9f246bb87a0.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:49 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:31:50 +0000
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 163ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/maps.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/custom.self-664e10f6b92a0d226e227a033893b25b459eb5d1f4f831560739ed0675bbe38f.css?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/pins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:03 +0000
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/maps.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/pins.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 129.237.92.212 at 2016-02-22 20:32:04 +0000
+
+
+Started GET "/mapos" for 129.237.92.212 at 2016-02-22 20:32:20 +0000
+
+ActionController::RoutingError (No route matches [GET] "/mapos"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.1) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.1) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.1) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (60.4ms)
+
+
+Started GET "/maps" for 129.237.92.212 at 2016-02-22 20:32:23 +0000
+Processing by MapsController#index as HTML
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps"
+  Rendered maps/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 205ms (Views: 203.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/maps/new" for 129.237.92.212 at 2016-02-22 20:32:26 +0000
+Processing by MapsController#new as HTML
+  Rendered maps/_form.html.erb (300.4ms)
+  Rendered maps/new.html.erb within layouts/application (304.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 475ms (Views: 404.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/maps" for 129.237.92.212 at 2016-02-22 20:33:21 +0000
+Processing by MapsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SWAx8zxIat74bI7IwvqmfnFe7JTLuyT3NurvCQlWExcYLfW80p1/2Mjsz59BqkBe08JjdYClh0fUi0oQzYD6tA==", "map"=>{"title"=>"Some title", "description"=>"some description"}, "commit"=>"Create Map"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "maps" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Some title"], ["description", "some description"], ["created_at", "2016-02-22 20:33:21.887772"], ["updated_at", "2016-02-22 20:33:21.887772"]]
+  [1m[36m (15.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://capstone-582-gehrigkeane.c9users.io/maps/1
+Completed 302 Found in 141ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/maps/1" for 129.237.92.212 at 2016-02-22 20:33:22 +0000
+Processing by MapsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMap Load (0.3ms)[0m  SELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPin Load (0.2ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."map_id" = ?  [["map_id", 1]]
+  Rendered maps/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 105.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dump" for 129.237.92.212 at 2016-02-22 20:33:33 +0000
+Processing by MapsController#dump as HTML
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mMap Load (0.3ms)[0m  SELECT "maps".* FROM "maps"
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mPicture Load (2.2ms)[0m  SELECT "pictures".* FROM "pictures"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered maps/dump.html.erb (43.0ms)
+Completed 200 OK in 60ms (Views: 41.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 129.237.92.212 at 2016-02-22 20:34:10 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 105.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 129.237.92.212 at 2016-02-22 20:34:17 +0000
+
+ActionController::RoutingError (No route matches [GET] "/pins"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.11.1) lib/puma/server.rb:507:in `handle_request'
+  puma (2.11.1) lib/puma/server.rb:375:in `process_client'
+  puma (2.11.1) lib/puma/server.rb:262:in `block in run'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `call'
+  puma (2.11.1) lib/puma/thread_pool.rb:104:in `block in spawn_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (51.0ms)
+
+
+Started GET "/maps" for 129.237.92.212 at 2016-02-22 20:34:24 +0000
+Processing by MapsController#index as HTML
+  [1m[35mMap Load (0.2ms)[0m  SELECT "maps".* FROM "maps"
+  Rendered maps/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 111ms (Views: 110.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/maps/1/pins" for 129.237.92.212 at 2016-02-22 20:34:26 +0000
+Processing by PinsController#index as HTML
+  Parameters: {"map_id"=>"1"}
+  [1m[36mMap Load (0.1ms)[0m  [1mSELECT  "maps".* FROM "maps" WHERE "maps"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."map_id" = ?  [["map_id", 1]]
+  Rendered pins/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 187ms (Views: 181.7ms | ActiveRecord: 0.3ms)

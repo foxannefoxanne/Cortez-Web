@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  resources :maps do
-  	resources :pins
-  end 
-  
-  #root 'maps#index'
-  root 'maps#home'
-  get 'new_maps' => 'maps#new'
-
-=======
 
   get 'sessions/new'
 
@@ -22,13 +12,15 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   resources :users
+
+  get   'dump'  => 'maps#dump'
+
   resources :maps do
     resources :pins
   end 
   
-  get   'dump'  => 'maps#dump'
-  
-  #root 'maps#index'
+  #root 'maps#home'
   get 'new_maps' => 'maps#new'
->>>>>>> hail_marry
+
+
 end

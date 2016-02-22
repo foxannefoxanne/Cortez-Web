@@ -42,11 +42,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-<<<<<<< HEAD
-  # config.force_ssl = true
-=======
   config.force_ssl = true
->>>>>>> hail_marry
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -75,7 +71,7 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  # Use default logging formatter so that PID and timestamp are not suppressed.
+  # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
