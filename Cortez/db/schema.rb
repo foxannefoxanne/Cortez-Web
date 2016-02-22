@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160215035117) do
+ActiveRecord::Schema.define(version: 20160222005431) do
+
+  create_table "audios", force: :cascade do |t|
+    t.integer  "pin_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "aud_clip_file_name"
+    t.string   "aud_clip_content_type"
+    t.integer  "aud_clip_file_size"
+    t.datetime "aud_clip_updated_at"
+  end
 
   create_table "maps", force: :cascade do |t|
     t.string   "title"
@@ -52,5 +62,15 @@ ActiveRecord::Schema.define(version: 20160215035117) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+
+  create_table "videos", force: :cascade do |t|
+    t.integer  "pin_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "vid_clip_file_name"
+    t.string   "vid_clip_content_type"
+    t.integer  "vid_clip_file_size"
+    t.datetime "vid_clip_updated_at"
+  end
 
 end
