@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title><%=yield(:title)%> | Cortez</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 
+                                              'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    
+    <%= render 'layouts/shim' %>
+    
+  </head>
+  <body>
+    <!-- Renders Header - /app/views/layouts/_header.html.erb -->
+    <%= render 'layouts/header' %>
+    
+    <div class="container">
+      <!-- Renders Flash Messages Site-Wide -->
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">Cortez</a>
+      <!-- Yeilds Page Rendering to Given Page - /app/views/. -->
+      <%= yield %>
+
+      <!-- Renders Footer - /app/views/layouts/_footer.html.erb -->
+      <%= render 'layouts/footer'%>
+      <%= debug(params) if Rails.env.development? %>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active">
-      <li><a href="#">Sign In</a></li>
-      <li><a href="#">About Us</a></li> 
-    </ul>
-  </div>
-</nav>
-<head>
-  <title> Cortez</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-
-<body>
-
-<%= yield %>
-
-</body>
-
-
+  </body>
 </html>

@@ -19,7 +19,6 @@ var handler =  Gmaps.build('Google');
   if(navigator.geolocation)
     navigator.geolocation.getCurrentPosition(displayOnMap);
 });  
-
 function displayOnMap(position){
     var handler = Gmaps.build('Google');
     handler.buildMap({ internal: {id: 'map'}}, function(){
@@ -42,7 +41,6 @@ function displayOnMap(position){
     handler.getMap().setZoom(12);
     }
 }); 
-
 google.maps.event.addListener (handler.getMap(), 'click', function(event){
   lat = event.latLng.lat()
   lng = event.latLng.lng()
@@ -56,7 +54,6 @@ google.maps.event.addListener (handler.getMap(), 'click', function(event){
      return false; 
    }
 }); 
-
 };
 </script> 
 

@@ -35,4 +35,33 @@
   <% end %> 
 <% end %> 
 
+<% unless @audios.empty? %>
+  <% @audios.each do |clip| %> 
+     <li class="span3" id="audio_<%= clip.id %>">
+        <div class="thumbnail">
+           <%= audio_tag clip.aud_clip.url, class: "audio-play" %>
+           <p class="btn btn-primary audioButton">Play</p>
+           <script>
+              $(".audioButton").on("click", function() {
+               $(".audio-play")[0].currentTime = 0;
+               return $(".audio-play")[0].play();
+             });
+           </script>
+        </div>
+     </li>
+  <% end %> 
+<% end %> 
+
+<!--
+<% unless @videos.empty? %>
+  <% @videos.each do |clip| %> 
+     <li class="span3" id="video_<%= clip.id %>">
+           <video controls>
+           <source src= "<%= clip.vid_clip.url %>" />
+           Your browswer does not support the video tag 
+           </video>
+     </li>
+  <% end %> 
+<% end %> -->
+
 <%= link_to 'Back', map_pins_path, 'data-no-turbolink' => true   %>
