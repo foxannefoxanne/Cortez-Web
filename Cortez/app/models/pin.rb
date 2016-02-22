@@ -4,5 +4,8 @@ class Pin < ActiveRecord::Base
   after_validation :geocode
 
   has_many :pictures, :dependent => :destroy 
+  has_many :audios, :dependent => :destroy 
+  has_many :videos, :dependent => :destroy 
+
   belongs_to :map
 end
