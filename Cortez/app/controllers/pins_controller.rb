@@ -47,7 +47,6 @@ class PinsController < ApplicationController
   def create
     @map = Map.find(params[:map_id])
     @pin = @map.pins.new(pin_params)
-    flash[:notice] = "Here we go!"
     # we'll credit: https://github.com/hackhowtofaq/multiple_file_upload_paperclip_rails/blob/master/app/controllers/galleries_controller.rb
     if @pin.save
         if params[:images]
