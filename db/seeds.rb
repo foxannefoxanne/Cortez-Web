@@ -16,6 +16,16 @@ User.create!(name:  "Qiaozhi Wang",
              password:              "foobar",
              password_confirmation: "foobar",
              admin: true)
+             
+Map.create!(title: "Sample",
+            description: "Sample map")
+            
+Pin.create!(title: "KU",
+            description: "KU Pin",
+            address: "1450 Jayhawk Blvd, Lawrence, KS 66045",
+            latitude: "38.9581",
+            longitude: "95.2478",
+            map_id: 1)
 
 99.times do |n|
   name  = Faker::Name.name
