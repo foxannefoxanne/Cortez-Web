@@ -1,57 +1,54 @@
 <%= form_for([@map, @pin],  :html => { :multipart => true }) do |f| %>
-  <% if @pin.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
-
-      <ul>
-      <% @pin.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br>
-    <%= f.text_field :longitude %>
-  </div>
-    <div class="field">
-    <%= f.label :map_id %><br>
-    <%= f.text_field :map_id %>
-  </div>
-  <div>
-     <%= f.label :pictures, :class => 'field' %>
-     <div class = "controls">
-      <%= file_field_tag "images[]", type: :file, multiple: true %>
-  </div>
-   <div>
-     <%= f.label :audios, :class => 'field' %>
-     <div class = "controls">
-      <%= file_field_tag "aud_clips[]", type: :file, multiple: true %>
-  </div>
-
-  <div>
-     <%= f.label :videos, :class => 'field' %>
-     <div class = "controls">
-      <%= file_field_tag "vid_clips[]", type: :file, multiple: true %>
-  </div> 
-  <div class="actions">
-    <%= f.submit %>
-  </div> 
+	<% if @pin.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
+			<ul>
+				<% @pin.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div class="field">
+		<%= f.label :title %><br>
+		<%= f.text_field :title, class: 'form-control' %>
+	</div>
+	<div class="field">
+		<%= f.label :description %><br>
+		<%= f.text_field :description, class: 'form-control' %>
+	</div>
+	<div class="field">
+		<%= f.label :address %><br>
+		<%= f.text_field :address, class: 'form-control' %>
+	</div>
+	<div class="field">
+		<%= f.label :latitude %><br>
+		<%= f.text_field :latitude, class: 'form-control' %>
+	</div>
+	<div class="field">
+		<%= f.label :longitude %><br>
+		<%= f.text_field :longitude, class: 'form-control' %>
+	</div>
+	<div class="field">
+		<%= f.label :map_id %><br>
+		<%= f.text_field :map_id, class: 'form-control' %>
+	</div>
+	<div>
+		<%= f.label :pictures, :class => 'field' %>
+	<div class = "controls">
+		<%= file_field_tag "images[]", type: :file, multiple: true, class: "btn btn-large btn-primary btn-file" %>
+	</div>
+	<div>
+		<%= f.label :audios, :class => 'field' %>
+	<div class = "controls">
+		<%= file_field_tag "aud_clips[]", type: :file, multiple: true, class: "btn btn-large btn-primary btn-file" %>
+	</div>
+	<div>
+		<%= f.label :videos, :class => 'field' %>
+	<div class = "controls">
+		<%= file_field_tag "vid_clips[]", type: :file, multiple: true, class: "btn btn-large btn-primary btn-file" %>
+	</div> 
+	<div class="actions">
+		<%= f.submit "Create Pin", class: "btn btn-primary" %>
+	</div> 
 <% end %>

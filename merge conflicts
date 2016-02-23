@@ -1,0 +1,59 @@
+Auto-merging Cortez/config/routes.rb
+CONFLICT (add/add): Merge conflict in Cortez/config/routes.rb
+Auto-merging Cortez/config/initializers/session_store.rb
+CONFLICT (add/add): Merge conflict in Cortez/config/initializers/session_store.rb
+Auto-merging Cortez/config/initializers/backtrace_silencers.rb
+CONFLICT (add/add): Merge conflict in Cortez/config/initializers/backtrace_silencers.rb
+Auto-merging Cortez/config/environments/production.rb
+CONFLICT (add/add): Merge conflict in Cortez/config/environments/production.rb
+Auto-merging Cortez/config/environments/development.rb
+CONFLICT (add/add): Merge conflict in Cortez/config/environments/development.rb
+Auto-merging Cortez/config/application.rb
+CONFLICT (add/add): Merge conflict in Cortez/config/application.rb
+Auto-merging Cortez/bin/setup
+CONFLICT (add/add): Merge conflict in Cortez/bin/setup
+Auto-merging Cortez/bin/rake
+CONFLICT (add/add): Merge conflict in Cortez/bin/rake
+Auto-merging Cortez/bin/rails
+CONFLICT (add/add): Merge conflict in Cortez/bin/rails
+Auto-merging Cortez/bin/bundle
+CONFLICT (add/add): Merge conflict in Cortez/bin/bundle
+Auto-merging Cortez/app/views/pins/show.html.erb
+CONFLICT (add/add): Merge conflict in Cortez/app/views/pins/show.html.erb
+Auto-merging Cortez/app/views/pins/new.html.erb
+CONFLICT (add/add): Merge conflict in Cortez/app/views/pins/new.html.erb
+Auto-merging Cortez/app/views/pins/index.html.erb
+CONFLICT (add/add): Merge conflict in Cortez/app/views/pins/index.html.erb
+Auto-merging Cortez/app/views/pins/edit.html.erb
+CONFLICT (add/add): Merge conflict in Cortez/app/views/pins/edit.html.erb
+Auto-merging Cortez/app/views/pins/_form.html.erb
+CONFLICT (add/add): Merge conflict in Cortez/app/views/pins/_form.html.erb
+Auto-merging Cortez/app/views/maps/index.html.erb
+CONFLICT (add/add): Merge conflict in Cortez/app/views/maps/index.html.erb
+Auto-merging Cortez/app/views/layouts/application.html.erb
+CONFLICT (add/add): Merge conflict in Cortez/app/views/layouts/application.html.erb
+Auto-merging Cortez/app/models/pin.rb
+CONFLICT (add/add): Merge conflict in Cortez/app/models/pin.rb
+Auto-merging Cortez/app/models/map.rb
+CONFLICT (add/add): Merge conflict in Cortez/app/models/map.rb
+Auto-merging Cortez/app/helpers/pins_helper.rb
+CONFLICT (add/add): Merge conflict in Cortez/app/helpers/pins_helper.rb
+Auto-merging Cortez/app/helpers/application_helper.rb
+CONFLICT (add/add): Merge conflict in Cortez/app/helpers/application_helper.rb
+Auto-merging Cortez/app/controllers/pins_controller.rb
+CONFLICT (add/add): Merge conflict in Cortez/app/controllers/pins_controller.rb
+Auto-merging Cortez/app/controllers/maps_controller.rb
+CONFLICT (add/add): Merge conflict in Cortez/app/controllers/maps_controller.rb
+Auto-merging Cortez/app/controllers/application_controller.rb
+CONFLICT (add/add): Merge conflict in Cortez/app/controllers/application_controller.rb
+Auto-merging Cortez/app/assets/stylesheets/pins.scss
+CONFLICT (add/add): Merge conflict in Cortez/app/assets/stylesheets/pins.scss
+Auto-merging Cortez/app/assets/stylesheets/maps.scss
+CONFLICT (add/add): Merge conflict in Cortez/app/assets/stylesheets/maps.scss
+Auto-merging Cortez/app/assets/stylesheets/custom.css.scss
+CONFLICT (add/add): Merge conflict in Cortez/app/assets/stylesheets/custom.css.scss
+Auto-merging Cortez/Gemfile.lock
+CONFLICT (add/add): Merge conflict in Cortez/Gemfile.lock
+Auto-merging Cortez/Gemfile
+CONFLICT (add/add): Merge conflict in Cortez/Gemfile
+Automatic merge failed; fix conflicts and then commit the result.
