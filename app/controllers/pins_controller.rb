@@ -37,6 +37,8 @@ class PinsController < ApplicationController
     end
   end
 
+
+
   # GET /pins/1/edit
   def edit
      @map = Map.find(params[:map_id])

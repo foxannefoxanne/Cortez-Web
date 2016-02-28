@@ -14,11 +14,18 @@
 </div>  
 
 <script type="text/javascript" charset='utf-8'>
+
+
 var handler =  Gmaps.build('Google');  
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   if(navigator.geolocation)
-    navigator.geolocation.getCurrentPosition(displayOnMap);
+    navigator.geolocation.getCurrentPosition(displayOnMap, showError);
 });  
+
+function showError(error) {
+   $("p").text("Location Services Disabled. Please allow or create pins by address.");
+}
+
 function displayOnMap(position){
     var handler = Gmaps.build('Google');
     handler.buildMap({ internal: {id: 'map'}}, function(){
@@ -28,19 +35,20 @@ function displayOnMap(position){
       handler.fitMapToBounds();
     }
     else{
-    var marker = handler.addMarker({
-      lat: position.coords.latitude,
-      lng: position.coords.longitude,
-      picture: {
-        url: "",
-        width:  0,
-        height: 0
-      },
-    });
-    handler.map.centerOn(marker);
-    handler.getMap().setZoom(12);
+      var marker = handler.addMarker({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+        picture: {
+          url: "",
+         width:  0,
+         height: 0
+        },
+      });
+      handler.map.centerOn(marker);
+      handler.getMap().setZoom(12);
     }
 }); 
+
 google.maps.event.addListener (handler.getMap(), 'click', function(event){
   lat = event.latLng.lat()
   lng = event.latLng.lng()
@@ -53,7 +61,8 @@ google.maps.event.addListener (handler.getMap(), 'click', function(event){
     else{
      return false; 
    }
-}); 
+});
+
 };
 </script> 
 

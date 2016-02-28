@@ -17,6 +17,7 @@
 		<%= f.label :description %><br>
 		<%= f.text_field :description, class: 'form-control' %>
 	</div>
+	
 	<div class="field">
 		<%= f.label :address %><br>
 		<%= f.text_field :address, class: 'form-control' %>
@@ -24,7 +25,7 @@
 	<div class="field">
 		<%= f.label :latitude %><br>
 		<%= f.text_field :latitude, class: 'form-control' %>
-	</div>
+	</div> 
 	<div class="field">
 		<%= f.label :longitude %><br>
 		<%= f.text_field :longitude, class: 'form-control' %>
@@ -38,17 +39,21 @@
 	<div class = "controls">
 		<%= file_field_tag "images[]", type: :file, multiple: true, class: "btn btn-large btn-primary btn-file" %>
 	</div>
+	<br>
 	<div>
 		<%= f.label :audios, :class => 'field' %>
 	<div class = "controls">
 		<%= file_field_tag "aud_clips[]", type: :file, multiple: true, class: "btn btn-large btn-primary btn-file" %>
 	</div>
+	<br>
 	<div>
 		<%= f.label :videos, :class => 'field' %>
 	<div class = "controls">
 		<%= file_field_tag "vid_clips[]", type: :file, multiple: true, class: "btn btn-large btn-primary btn-file" %>
 	</div> 
+	<br>
 	<div class="actions">
 		<%= f.submit "Create Pin", class: "btn btn-primary" %>
 	</div> 
+	<br>
 <% end %>
