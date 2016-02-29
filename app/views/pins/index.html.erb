@@ -25,6 +25,15 @@ var handler =  Gmaps.build('Google');
 
 function showError(error) {
    document.getElementById("locnotice").innerHTML ="Location Services Disabled. Please <a href='/help'> allow </a> or <a href='pins/new'>create pins by address </a> .";
+
+   var handler = Gmaps.build('Google');
+   handler.buildMap({ internal: {id: 'map'}}, function(){
+    var markers = handler.addMarkers(<%= raw @hash.to_json %>);
+    if(markers.length > 0){
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds(); 
+    }
+   }); 
 }
 
 function displayOnMap(position){
