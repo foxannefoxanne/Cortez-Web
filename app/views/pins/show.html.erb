@@ -26,6 +26,7 @@
 </p>
 
 <% unless @pictures.empty? %>
+ <ul style="list-style-type: none";> 
   <% @pictures.each do |pic| %> 
      <li class="span3" id="picture_<%= pic.id %>">
         <div class="thumbnail">
@@ -33,9 +34,11 @@
         </div>
      </li>
   <% end %> 
+  </ul>
 <% end %> 
 
 <% unless @audios.empty? %>
+ <ul style="list-style-type: none";> 
   <% @audios.each do |clip| %> 
      <li class="span3" id="audio_<%= clip.id %>">
         <div class="thumbnail">
@@ -50,10 +53,12 @@
         </div>
      </li>
   <% end %> 
+  </ul>
 <% end %> 
 
-<!--
+
 <% unless @videos.empty? %>
+ <ul style="list-style-type: none";> 
   <% @videos.each do |clip| %> 
      <li class="span3" id="video_<%= clip.id %>">
            <video controls>
@@ -62,6 +67,7 @@
            </video>
      </li>
   <% end %> 
-<% end %> -->
+    </ul>
+<% end %> 
 
 <%= link_to 'Back', map_pins_path, class: "btn btn-primary", 'data-no-turbolink' => true   %>

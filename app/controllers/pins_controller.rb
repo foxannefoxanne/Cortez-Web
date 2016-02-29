@@ -52,16 +52,29 @@ class PinsController < ApplicationController
     # we'll credit: https://github.com/hackhowtofaq/multiple_file_upload_paperclip_rails/blob/master/app/controllers/galleries_controller.rb
     if @pin.save
         if params[:images]
-          params[:images].each { |image| 
-            @pin.pictures.create(image: image)}
+          params[:images].each { |image|
+            @pic = @pin.pictures.new(image: image)
+            if (!@pic.save)
+              flash[:notice] = "Some of your media files were not uploaded correctly"
+            end 
+            }
         end 
         if params[:aud_clips]
           params[:aud_clips].each { |aud_clip| 
-          @pin.audios.create(aud_clip: aud_clip)}
-        end 
+          @aud = @pin.audios.new(aud_clip: aud_clip)
+            if (!@aud.save)
+              flash[:notice] = "Some of your media files were not uploaded correctly"
+            end 
+          }       
+        end
+
         if params[:vid_clips]
           params[:vid_clips].each { |vid_clip| 
-          @pin.videos.create(vid_clip: vid_clip)}
+          @vid = @pin.videos.create(vid_clip: vid_clip)
+          if (!@vid.save)
+              flash[:notice] = "Some of your media files were not uploaded correctly"
+            end 
+          }
         end 
       redirect_to map_pins_path(@map)
     else 
@@ -77,16 +90,28 @@ class PinsController < ApplicationController
     if @pin.update(pin_params)
         if params[:images]
           params[:images].each { |image| 
-            @pin.pictures.create(image: image)}
-        end 
+            @pic = @pin.pictures.new(image: image)
+            if (!@pic.save)
+              flash[:notice] = "Some of your media files were not uploaded correctly"
+            end 
+            }
+          end 
         if params[:aud_clips]
           params[:aud_clips].each { |aud_clip| 
-          @pin.audios.create(aud_clip: aud_clip)}
-        end 
+            @aud = @pin.audios.new(aud_clip: aud_clip)
+            if (!@aud.save)
+              flash[:notice] = "Some of your media files were not uploaded correctly"
+            end       
+            }
+          end 
         if params[:vid_clips]
           params[:vid_clips].each { |vid_clip| 
-          @pin.videos.create(vid_clip: vid_clip)}
-        end 
+            @vid = @pin.videos.create(vid_clip: vid_clip)
+            if (!@vid.save)
+              flash[:notice] = "Some of your media files were not uploaded correctly"
+            end 
+          }
+          end 
       redirect_to map_pins_path(@map)
     else
       render :edit

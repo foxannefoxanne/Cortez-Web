@@ -6,8 +6,8 @@
 </head>
 
 <body>
-<p id="notice"><%= notice %></p>
-<p id="locnotice"></p>
+<!-- <p id="notice"><%= notice %></p> --> 
+<p id="locn"></p> 
 
 <div>
   <div id="map" style='width: 100%; height: 85vh;'>
@@ -24,7 +24,7 @@ var handler =  Gmaps.build('Google');
 });  
 
 function showError(error) {
-   document.getElementById("locnotice").innerHTML ="Location Services Disabled. Please <a href='/help'> allow </a> or <a href='pins/new'>create pins by address </a> .";
+   document.getElementById("locn").innerHTML ="Location Services Disabled. Please <a href='/help'> allow </a> or <a href='pins/new'>create pins by address </a> .";
 
    var handler = Gmaps.build('Google');
    handler.buildMap({ internal: {id: 'map'}}, function(){

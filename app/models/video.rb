@@ -5,6 +5,6 @@ class Video < ActiveRecord::Base
     	:path => ":rails_root/public/video/:id/:filename",
    	    :url  => "/video/:id/:filename"
 
-    do_not_validate_attachment_file_type :vid_clip
+    validates_attachment_content_type :vid_clip, :content_type => ['video/mp4',]
 
 end

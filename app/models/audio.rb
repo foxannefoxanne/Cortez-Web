@@ -5,5 +5,5 @@ class Audio < ActiveRecord::Base
     	:path => ":rails_root/public/audio/:id/:filename",
     	:url  => "/audio/:id/:filename"
 
-    do_not_validate_attachment_file_type :aud_clip
+    validates_attachment_content_type :aud_clip, :content_type => ['audio/mp3',]
 end
