@@ -29,7 +29,7 @@
  <ul style="list-style-type: none";> 
   <% @pictures.each do |pic| %> 
      <li class="span3" id="picture_<%= pic.id %>">
-        <div class="thumbnail">
+        <div style="max-width:520px" class="thumbnail">
            <%= image_tag pic.image.url %>
         </div>
      </li>
@@ -61,7 +61,7 @@
  <ul style="list-style-type: none";> 
   <% @videos.each do |clip| %> 
      <li class="span3" id="video_<%= clip.id %>">
-           <video controls>
+           <video width="520" controls>
            <source src= "<%= clip.vid_clip.url %>" />
            Your browswer does not support the video tag 
            </video>
@@ -70,4 +70,6 @@
     </ul>
 <% end %> 
 
+<%= link_to "Edit Media", map_pin_editmedia_path(:pin_id => @pin.id, :map_id => @map.id), class: "btn btn-primary" %>
+<%= link_to 'Edit', edit_map_pin_path(:id => @pin.id, :map_id => @map.id),  class: "btn btn-primary" %>
 <%= link_to 'Back', map_pins_path, class: "btn btn-primary", 'data-no-turbolink' => true   %>

@@ -16,7 +16,13 @@ Rails.application.routes.draw do
   get   'dump'  => 'maps#dump'
 
   resources :maps do
-    resources :pins
+    resources :pins do
+      get :editmedia
+      post :editmedia
+      resources :pictures
+      resources :audios
+      resources :videos
+    end
   end 
   
   #root 'maps#home'

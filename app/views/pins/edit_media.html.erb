@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pin.title %>
+</p>
+
+
+<% unless @pictures.empty? %>
+ <ul style="list-style-type: none";> 
+  <% @pictures.each do |pic| %> 
+     <li class="span3" id="picture_<%= pic.id %>">
+        <div class="thumbnail">
+           <%= image_tag pic.image.url %>
+        </div>
+     </li>
+  <% end %> 
+  </ul>
+<% end %> 
+
+<% unless @audios.empty? %>
+ <ul style="list-style-type: none";> 
+  <% @audios.each do |clip| %> 
+     <li class="span3" id="audio_<%= clip.id %>">
+        <div class="thumbnail">
+           <%= audio_tag clip.aud_clip.url, class: "audio-play" %>
+           <p class="btn btn-primary audioButton">Play</p>
+           <script>
+              $(".audioButton").on("click", function() {
+               $(".audio-play")[0].currentTime = 0;
+               return $(".audio-play")[0].play();
+             });
+           </script>
+        </div>
+     </li>
+  <% end %> 
+  </ul>
+<% end %> 
+
+
+<% unless @videos.empty? %>
+ <ul style="list-style-type: none";> 
+  <% @videos.each do |clip| %> 
+     <li class="span3" id="video_<%= clip.id %>">
+           <video controls>
+           <source src= "<%= clip.vid_clip.url %>" />
+           Your browswer does not support the video tag 
+           </video>
+     </li>
+  <% end %> 
+    </ul>
+<% end %> 
+
+
+<%= link_to 'Back', map_pins_path, class: "btn btn-primary", 'data-no-turbolink' => true   %>

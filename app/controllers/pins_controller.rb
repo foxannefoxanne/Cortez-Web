@@ -127,6 +127,15 @@ class PinsController < ApplicationController
     redirect_to map_pins_path(@map), notice: 'Pin was successfully destroyed.'
   end
 
+  def editmedia
+     @map = Map.find(params[:map_id])
+     @pin = @map.pins.find(params[:pin_id])
+     @pictures = @pin.pictures
+     @audios = @pin.audios
+     @videos = @pin.videos
+
+  end 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin

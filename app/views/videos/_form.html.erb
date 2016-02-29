@@ -1,0 +1,23 @@
+<%= form_for([@map, @pin, @video]) do |f| %>
+  <% if @video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% @video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <video width="520" controls>
+           <source src= "<%= @video.vid_clip.url %>" />
+           Your browswer does not support the video tag 
+    </video>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

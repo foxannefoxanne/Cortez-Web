@@ -1,0 +1,60 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @pin.title %>
+</p>
+
+
+<% unless @pictures.empty? %>
+ <ul style="list-style-type: none";> 
+  <% @pictures.each do |pic| %> 
+     <li class="span3" id="picture_<%= pic.id %>">
+        <div style="max-width:520px" class="thumbnail">
+           <%= image_tag pic.image.url %> <br> 
+           <%= link_to 'Edit', edit_map_pin_picture_path(:id => pic.id, :pin_id => @pin.id, :map_id => @map.id),  class: "btn btn-primary" %>
+
+        </div>
+     </li>
+  <% end %> 
+  </ul>
+<% end %> 
+
+<% unless @audios.empty? %>
+ <ul style="list-style-type: none";> 
+  <% @audios.each do |clip| %> 
+     <li class="span3" id="audio_<%= clip.id %>">
+        <div class="thumbnail">
+           <%= audio_tag clip.aud_clip.url, class: "audio-play" %>
+           <p class="btn btn-primary audioButton">Play</p>
+           <script>
+              $(".audioButton").on("click", function() {
+               $(".audio-play")[0].currentTime = 0;
+               return $(".audio-play")[0].play();
+             });
+           </script>
+            <br><br>
+            <%= link_to 'Edit', edit_map_pin_audio_path(:id => clip.id, :pin_id => @pin.id, :map_id => @map.id),  class: "btn btn-primary" %>
+        </div>
+     </li>
+  <% end %> 
+  </ul>
+<% end %> 
+
+
+<% unless @videos.empty? %>
+ <ul style="list-style-type: none";> 
+  <% @videos.each do |clip| %> 
+     <li class="thumbnail" id="video_<%= clip.id %>">
+           <video width="520" controls>
+           <source src= "<%= clip.vid_clip.url %>" />
+           Your browswer does not support the video tag 
+           </video><br><br>
+           <%= link_to 'Edit', edit_map_pin_video_path(:id => clip.id, :pin_id => @pin.id, :map_id => @map.id),  class: "btn btn-primary" %>
+
+     </li>
+  <% end %> 
+    </ul>
+<% end %> 
+
+
+<%= link_to 'Back', map_pins_path, class: "btn btn-primary", 'data-no-turbolink' => true   %>

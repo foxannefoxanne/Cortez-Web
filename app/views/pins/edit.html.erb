@@ -2,6 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [@map, @pin] %> |
-<%= link_to 'Destroy', [@map, @pin], method: :delete, data: { confirm: 'Are you sure?' } %> | 
-<%= link_to 'Back', map_pins_path, 'data-no-turbolink' => true   %>
+<%= link_to "Edit Media", map_pin_editmedia_path(:pin_id => @pin.id, :map_id => @map.id), class: "btn btn-primary" %>
+<%= link_to 'Show', [@map, @pin], class: "btn btn-primary"  %> 
+<%= link_to 'Destroy', [@map, @pin], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary"  %> 
+<%= link_to 'Back', map_pins_path, 'data-no-turbolink' => true, class: "btn btn-primary"   %>
