@@ -16,4 +16,6 @@
 //= require bootstrap
 //= require underscore
 //= require gmaps/google
+//= require jquery.ui.widget
+//= require z.jquery.fileupload
 //= require_tree .
