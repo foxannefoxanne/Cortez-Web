@@ -6,6 +6,17 @@ class MapsController < ApplicationController
     @maps = Map.all
   end
 
+
+  def maps_dump
+    @maps = Map.all
+    render :layout => false
+  end 
+  def map_dump
+    @map = Map.find(params[:map_id])
+    @pins = @map.pins.all 
+    render :layout => false
+  end
+  
   def dump
     Rails.application.eager_load! # To load all models app/models/**/*.rb
     @all_records = ActiveRecord::Base.descendants.map &:all

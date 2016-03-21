@@ -1,0 +1,36 @@
+<%# raw(@map.to_json) %>
+<% a = {
+  "mapName": @map.title,
+}%>
+<pre><%= JSON.pretty_generate(a) %></pre>
+
+<% @pins.each do |pin| %> 
+  <% a = {
+    "markerTitle": pin.title,
+    "markerSnippet": pin.description,
+     "location": {
+        "lat": pin.latitude,
+        "lng": pin.longitude,
+      },
+      "radius": 100,
+      "expirationDuration": -1,
+      "notificationResponsiveness": 0,
+       "GEOFENCE_TRANSITION_ENTER": {
+          "sendNotification": true,
+          "notificationText": ""
+         },
+         "GEOFENCE_TRANSITION_DWELL": {
+           "loiteringDelay": 30000,
+            "sendNotification": true,
+            "notificationText": ""
+          }, 
+         "GEOFENCE_TRANSITION_EXIT": {
+          "sendNotification": true,
+          "notificationText": ""
+          },
+        "infoActivityString1": "",
+        "infoActivityString2": "", 
+  }%>
+<pre><%= JSON.pretty_generate(a) %></pre>
+
+<% end %>  

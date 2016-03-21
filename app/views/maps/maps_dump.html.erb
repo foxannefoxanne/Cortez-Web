@@ -1,0 +1,8 @@
+<% @maps.each do |map| %> 
+  <% a = {
+    "mapTitle": map.title,
+    "mapSnippet": map.description,
+  }%>
+<pre><%= JSON.pretty_generate(a) %></pre>
+
+<% end %>  
