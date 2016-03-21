@@ -1,8 +1,16 @@
-<% @maps.each do |map| %> 
-  <% a = {
-    "mapTitle": map.title,
-    "mapSnippet": map.description,
-  }%>
-<pre><%= JSON.pretty_generate(a) %></pre>
+<%
+	map_hash =  {}
 
-<% end %>  
+	map_arr = @maps.map{|entry| 
+    	{
+    		'mapName' => entry.title,
+        	'mapDescription' => entry.description,
+        	'mapLink' =>  "https://thawing-dusk-70157.herokuapp.com/maps/#{entry.id}/map_dump"
+      	} 
+    }
+
+    map_hash['maps'] = map_arr
+
+  %>
+<pre><%= JSON.pretty_generate(map_hash) %></pre>
+
