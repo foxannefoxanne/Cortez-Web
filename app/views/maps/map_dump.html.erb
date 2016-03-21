@@ -1,11 +1,8 @@
-<%# raw(@map.to_json) %>
-<% a = {
-  "mapName": @map.title,
-}%>
-<pre><%= JSON.pretty_generate(a) %></pre>
+<% 
+my_hash = { "mapName" => "#{@map.title}" }
 
-<% @pins.each do |pin| %> 
-  <% a = {
+arr = @pins.map{ |pin|
+    {
     "markerTitle": pin.title,
     "markerSnippet": pin.description,
      "location": {
@@ -30,7 +27,9 @@
           },
         "infoActivityString1": "",
         "infoActivityString2": "", 
-  }%>
-<pre><%= JSON.pretty_generate(a) %></pre>
+  }
+}
 
-<% end %>  
+my_hash["geofences"] = arr
+%>
+<pre><%= JSON.pretty_generate(my_hash) %></pre>
