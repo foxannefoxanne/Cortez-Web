@@ -31,8 +31,8 @@
 		<%= f.text_field :longitude, class: 'form-control' %>
 	</div>
 	<div class="field">
-		<%= f.label :map_id %><br>
-		<%= f.text_field :map_id, class: 'form-control' %>
+		<b>Information</b><br>
+	    <%= f.text_area :info, cols: 20, rows: 20, class: 'form-control' %>
 	</div>
 	<div>
 		<%= f.label :pictures, :class => 'field' %>

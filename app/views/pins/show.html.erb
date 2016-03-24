@@ -25,6 +25,12 @@
   <%= @pin.latitude %>
 </p>
 
+<p>
+  <strong>Information:</strong>
+  <%= @pin.info %>
+</p>
+
+
 <% unless @pictures.empty? %>
  <ul style="list-style-type: none";> 
   <% @pictures.each do |pic| %> 
