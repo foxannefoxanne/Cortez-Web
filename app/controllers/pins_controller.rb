@@ -1,6 +1,16 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
+  def pin_dump
+    @map = Map.find(params[:map_id])
+    @pin = @map.pins.find(params[:pin_id])
+    @pictures = @pin.pictures
+    @audios = @pin.audios
+    @videos = @pin.videos
+
+    render :layout => false
+  end 
+
   # GET /pins
   def index
      @map = Map.find(params[:map_id])
@@ -144,6 +154,6 @@ class PinsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def pin_params
-      params.require(:pin).permit(:title, :description, :address, :latitude, :longitude, :picture, :audio, :video)
+      params.require(:pin).permit(:title, :description, :address, :latitude, :longitude, :picture, :audio, :video, :info)
     end
 end

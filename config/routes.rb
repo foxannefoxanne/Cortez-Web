@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :maps do
     get :map_dump
     resources :pins do
+      get :pin_dump
       get :editmedia
       post :editmedia
       resources :pictures
