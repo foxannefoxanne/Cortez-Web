@@ -1,0 +1,37 @@
+<% 
+pin_hash = { "pinName" => "#{@pin.title}", 
+            "pinDescription" => "#{@pin.description}",
+            "pinInfo" => "#{@pin.info}"}
+
+pic_arr = @pictures.map{ |pic|
+  {
+     "mediaType" => "pic",
+     "picId" => pic.id,
+     "picLink" => "google.com",
+  }
+}
+
+vid_arr = @videos.map{ |vid|
+  {
+     "mediaType" => "vid",
+     "vidId" => vid.id,
+     "vidLink" => "google.com"
+  }
+}
+
+aud_arr = @audios.map{ |aud|
+  {
+     "mediaType" => "aud", 
+     "audId" => aud.id,
+     "audLink" => "google.com"
+   }
+
+}
+
+arr = pic_arr + vid_arr + aud_arr
+
+pin_hash['media'] = arr
+
+
+%>
+<pre><%= JSON.pretty_generate(pin_hash) %></pre>

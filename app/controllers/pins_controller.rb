@@ -1,6 +1,16 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
+  def pin_dump
+    @map = Map.find(params[:map_id])
+    @pin = @map.pins.find(params[:pin_id])
+    @pictures = @pin.pictures
+    @audios = @pin.audios
+    @videos = @pin.videos
+
+    render :layout => false
+  end 
+
   # GET /pins
   def index
      @map = Map.find(params[:map_id])

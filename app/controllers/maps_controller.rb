@@ -11,6 +11,7 @@ class MapsController < ApplicationController
     @maps = Map.all
     render :layout => false
   end 
+  
   def map_dump
     @map = Map.find(params[:map_id])
     @pins = @map.pins.all 
