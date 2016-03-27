@@ -15,7 +15,7 @@ vid_arr = @videos.map{ |vid|
   {
      "mediaType" => "vid",
      "vidId" => vid.id,
-     "vidLink" => "google.com"
+     "vidLink" => vid.vid_clip.url,
   }
 }
 
@@ -23,7 +23,7 @@ aud_arr = @audios.map{ |aud|
   {
      "mediaType" => "aud", 
      "audId" => aud.id,
-     "audLink" => "google.com"
+     "audLink" => aud.aud_clip.url,
    }
 
 }
