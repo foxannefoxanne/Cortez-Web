@@ -13,7 +13,7 @@ gem 'jquery-rails',             '4.0.3'
 gem 'turbolinks',               '2.3.0'
 gem 'jbuilder',                 '2.2.3'
 gem 'sdoc',                     '0.4.0', group: :doc
-gem "paperclip"
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 gem 'aws-sdk'
 
 group :development, :test do
