@@ -2,6 +2,7 @@ class Picture < ActiveRecord::Base
   belongs_to :pin
 
   has_attached_file :image,
+	:s3_protocol => 'https',
     :path => ":rails_root/public/images/:id/:filename",
     :url  => "/images/:id/:filename"
 
