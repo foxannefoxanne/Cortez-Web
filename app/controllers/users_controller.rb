@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
-  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update]
+#  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update]
 
   def destroy
     User.find(params[:id]).destroy
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)    # Not the final implementation!
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to Cortez!"
       redirect_to @user
     else
       render 'new'
@@ -51,7 +51,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, :avatar)
     end
 
     # Confirms a logged-in user.
@@ -74,7 +74,7 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
     
-    def set_s3_direct_post
-      @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')
-    end
+   # def set_s3_direct_post
+  #    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')
+   # end
 end

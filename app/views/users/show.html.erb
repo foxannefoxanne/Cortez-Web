@@ -12,7 +12,7 @@
       </h1>
     </section>
   </aside> -->
-  <%= gravatar_for @user %>
+  <!-- <%= gravatar_for @user %> --> 
   <table class="table table-striped">
     <thead>
       <tr>
@@ -21,6 +21,12 @@
       </tr>
     </thead>
     <tbody>
+     <tr>
+        <td>  <div style="max-width:200px">
+                  <%= image_tag @user.avatar.url %>        
+              </div>
+      </td>
+     </tr>
       <tr>
         <td>Username:</td>
         <td><%= @user.name %></td>

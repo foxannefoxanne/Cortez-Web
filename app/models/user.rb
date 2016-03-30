@@ -10,6 +10,14 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
+  has_attached_file :avatar,
+  :s3_protocol => 'https',
+    :path => ":rails_root/public/user/:id/:filename",
+    :url  => ":s3_domain_url"
+
+  validates_attachment_content_type :avatar, :content_type => ['image/jpg', 'image/gif', 'image/jpeg', 'image/png']
+
+
   # Returns the hash digest of the given string.
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
