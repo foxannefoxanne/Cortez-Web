@@ -22,9 +22,15 @@
     </thead>
     <tbody>
      <tr>
-        <td>  <div style="max-width:200px">
-                  <%= image_tag @user.avatar.url %>        
-              </div>
+        <td> <% if @user.avatar.exists? %>
+                <div style="max-width:200px" class="thumbnail">
+                   <%= image_tag @user.avatar.url(:thumbnail) %>  
+                </div>
+             <% else %>
+                  <div style="max-width:200px" class="thumbnail">
+                      <%= image_tag "/images/missing.png" %> 
+                  </div>
+             <% end %>      
       </td>
      </tr>
       <tr>

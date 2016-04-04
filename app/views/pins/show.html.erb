@@ -32,6 +32,7 @@
 
 
 <% unless @pictures.empty? %>
+ <p> <b> ATTACHED IMAGES </b> </p>
  <ul style="list-style-type: none";> 
   <% @pictures.each do |pic| %> 
      <li class="span3" id="picture_<%= pic.id %>">
@@ -44,6 +45,7 @@
 <% end %> 
 
 <% unless @audios.empty? %>
+ <p> <b> ATTACHED AUDIO </b> </p>
  <ul style="list-style-type: none";> 
   <% @audios.each do |clip| %> 
      <li class="span3" id="audio_<%= clip.id %>">
@@ -64,6 +66,8 @@
 
 
 <% unless @videos.empty? %>
+ <p> <b> ATTACHED VIDEO </b> </p>
+
  <ul style="list-style-type: none";> 
   <% @videos.each do |clip| %> 
      <li class="span3" id="video_<%= clip.id %>">
