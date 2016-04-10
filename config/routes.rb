@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   resources :users
 
   get 'maps_dump' => 'maps#maps_dump'
-  get   'dump'  => 'maps#dump'
 
   resources :maps do
     get :map_dump
