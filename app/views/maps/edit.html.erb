@@ -1,6 +1,6 @@
 <h1>Editing Map</h1>
 
-<%= render 'form' %> 
+<%= render partial: 'form', :locals => {:action_string => "Update Map"} %>
 
 <p id="notice"><%= notice %></p>
 <script src="//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry" type="text/javascript"></script>

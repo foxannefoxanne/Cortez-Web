@@ -1,6 +1,6 @@
 <h1>Editing Pin</h1>
 
-<%= render 'form' %>
+<%= render partial: 'form', :locals => {:action_string => "Update Pin"} %>
 
 <%= link_to "Edit Media", map_pin_editmedia_path(:pin_id => @pin.id, :map_id => @map.id), class: "btn btn-primary" %>
 <%= link_to 'Show', [@map, @pin], class: "btn btn-primary"  %> 

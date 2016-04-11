@@ -1,5 +1,5 @@
 <h1>New Pin</h1>
 
-<%= render 'form' %>
+<%= render partial: 'form', :locals => {:action_string => "Create Pin"} %>
 <br>
 <%= link_to 'Back', map_pins_path(@map), class: "btn btn-primary", 'data-no-turbolink' => true   %>
