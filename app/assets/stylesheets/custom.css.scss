@@ -234,24 +234,29 @@ input {
 //Other unknow buttons
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
+    border-color: #009688;
 }
  
 .btn-primary {
     background: #009688;
     color: #ffffff;
+    border-color: #009688;
 }
  
 .btn-primary.outline {
     color: #009688;
+    border-color: #009688;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.outline, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     background: #00695C;
+    border-color: #009688;
 }
  
 .btn-primary:active, .btn-primary.active {
     background: #009688;
     box-shadow: none;
+    border-color: #009688;
 }
 
 /* navbar */
