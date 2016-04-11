@@ -65,7 +65,7 @@ class PinsController < ApplicationController
           params[:images].each { |image|
             @pic = @pin.pictures.new(image: image)
             if (!@pic.save)
-              flash[:notice] = "Some of your media files were not uploaded correctly"
+              flash[:notice] = "Some of your media files were not uploaded correctly, We currently only support .png - .jpg - .jpeg - .gif files"
             end 
             }
         end 
@@ -73,7 +73,7 @@ class PinsController < ApplicationController
           params[:aud_clips].each { |aud_clip| 
           @aud = @pin.audios.new(aud_clip: aud_clip)
             if (!@aud.save)
-              flash[:notice] = "Some of your media files were not uploaded correctly"
+              flash[:notice] = "Some of your media files were not uploaded correctly, We currently only support .mp3 files"
             end 
           }       
         end
@@ -82,8 +82,8 @@ class PinsController < ApplicationController
           params[:vid_clips].each { |vid_clip| 
           @vid = @pin.videos.create(vid_clip: vid_clip)
           if (!@vid.save)
-              flash[:notice] = "Some of your media files were not uploaded correctly"
-            end 
+              flash[:notice] = "Some of your media files were not uploaded correctly, We currently only support .mp4 files"
+          end 
           }
         end 
       redirect_to map_pins_path(@map)
@@ -102,26 +102,26 @@ class PinsController < ApplicationController
           params[:images].each { |image| 
             @pic = @pin.pictures.new(image: image)
             if (!@pic.save)
-              flash[:notice] = "Some of your media files were not uploaded correctly"
+              flash[:notice] = "Some of your media files were not uploaded correctly, We currently only support .png - .jpg - .jpeg - .gif files"
             end 
             }
-          end 
+        end 
         if params[:aud_clips]
           params[:aud_clips].each { |aud_clip| 
             @aud = @pin.audios.new(aud_clip: aud_clip)
             if (!@aud.save)
-              flash[:notice] = "Some of your media files were not uploaded correctly"
+              flash[:notice] = "Some of your media files were not uploaded correctly, We currently only support .mp3 files"
             end       
             }
-          end 
+        end 
         if params[:vid_clips]
           params[:vid_clips].each { |vid_clip| 
             @vid = @pin.videos.create(vid_clip: vid_clip)
             if (!@vid.save)
-              flash[:notice] = "Some of your media files were not uploaded correctly"
-            end 
+              flash[:notice] = "Some of your media files were not uploaded correctly, We currently only support .mp4 files"
+            end
           }
-          end 
+        end
       redirect_to map_pins_path(@map)
     else
       render :edit
