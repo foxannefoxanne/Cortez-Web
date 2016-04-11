@@ -1,9 +1,8 @@
 <h1>Editing Map</h1>
 <% if (@map.ispublic == 1) || (@map.user_id == @user_id) %>
-	<%= render 'form' %> 
+	<%= render 'form' %> <br> 
 	<%= link_to 'Show', @map, class: "btn btn-primary" %> 
-	<br> 
 <% else %> 
-You do not have access to edit this map <br> <br> 
+You do not have access to edit this map <br>
 <% end %> 
 <%= link_to 'Back', maps_path, class: "btn btn-primary" %>

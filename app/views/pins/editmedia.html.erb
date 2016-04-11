@@ -1,3 +1,4 @@
+<% if (@map.public_edit == 1) || (@map.user_id == @user_id) %>
 
 <p>
   <strong>Name:</strong>
@@ -55,6 +56,8 @@
   <% end %> 
     </ul>
 <% end %> 
-
+<% else %> 
+You do not have permission to view this map 
+<% end %> 
 
 <%= link_to 'Back', map_pins_path, class: "btn btn-primary", 'data-no-turbolink' => true   %>
