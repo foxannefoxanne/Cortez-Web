@@ -12,16 +12,18 @@
 
   <tbody>
     <% @maps.each do |map| %>
-      <tr>
-        <td><%= map.title %></td>
-        <td><%= map.description %></td>
-        
-        <td><%= link_to 'Show', map_pins_path(map), class: "btn btn-sm btn-primary", 'data-no-turbolink' => true  %></td>
-        <td><%= link_to 'Edit', edit_map_path(map), class: "btn btn-sm btn-primary" %></td>
-        <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-primary" %></td>
-      </tr>
-    <% end %>
-  </tbody>
+      <% if (map.ispublic == 1) || (map.user_id == @user_id) %>
+        <tr>
+          <td><%= map.title %></td>
+          <td><%= map.description %></td>
+          
+          <td><%= link_to 'Show', map_pins_path(map), class: "btn btn-sm btn-primary", 'data-no-turbolink' => true  %></td>
+          <td><%= link_to 'Edit', edit_map_path(map), class: "btn btn-sm btn-primary" %></td>
+          <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-primary" %></td>
+        </tr>
+        <% end %> 
+      <% end %>
+    </tbody>
 </table>
 
 <br>

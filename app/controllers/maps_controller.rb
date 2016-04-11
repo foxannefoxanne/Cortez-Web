@@ -3,6 +3,11 @@ class MapsController < ApplicationController
 
   # GET /maps
   def index
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
     @maps = Map.all
   end
 
@@ -28,6 +33,12 @@ class MapsController < ApplicationController
 
   # GET /maps/1
   def show
+     if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
+
     @maps = Map.find(params[:id]) 
   end
 
@@ -39,6 +50,11 @@ class MapsController < ApplicationController
 
   # GET /maps/1/edit
   def edit
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
      @hash = Gmaps4rails.build_markers(@pins) do |pin, marker|
       marker.lat pin.latitude
       marker.lng pin.longitude
@@ -84,7 +100,7 @@ class MapsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def map_params
-      params.require(:map).permit(:title, :description, pins_attributes: [:title, :description, :address, :latitude, :longitude])
+      params.require(:map).permit(:title, :description, :ispublic, pins_attributes: [:title, :description, :address, :latitude, :longitude])
     end
     
 end

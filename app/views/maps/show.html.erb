@@ -1,17 +1,25 @@
-
-<p>
-  <strong>Title:</strong>
-  <%= @map.title %>
-  <br>
-  <strong>Description:</strong>
-  <%= @map.description %>
-</p>
-<p>
-  <strong> Pins: </strong>
-  <% @map.pins.each do |pins| %>
-  	<%= pins.title %>
-  <% end %> 
-</p>	
-
+<% if (@map.ispublic == 1) || (@map.user_id == @user_id) %>
+	<p>
+  		<strong>Title:</strong>
+  		<%= @map.title %> <br>
+  		<strong>Description:</strong>
+  		<%= @map.description %>
+	</p>
+  	<strong> Public?: </strong>
+  		<% if @map.ispublic == 1 %>
+  			Yes
+  		<% else %> 
+			No
+  		<% end %>
+	<p>
+  		<strong> Pins: </strong>
+  		<% @map.pins.each do |pins| %>
+  			<%= pins.title %>
+	  	<% end %> 
+	</p>	
 <%= link_to 'Edit', edit_map_path(@map), class: "btn btn-primary" %> 
+<% else %> 
+You do not have access to view this map <br> <br> 
+<% end %> 
 <%= link_to 'Back', maps_path, class: "btn btn-primary" %>
+
