@@ -13,23 +13,27 @@ class MapsController < ApplicationController
 
 
   def maps_dump
-    @maps = Map.all
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
+    @maps = Map.where('(ispublic = 1) OR (user_id = @user_id)')
+
     render :layout => false
   end 
   
   def map_dump
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
     @map = Map.find(params[:map_id])
     @pins = @map.pins.all 
     render :layout => false
   end
   
-  def dump
-    Rails.application.eager_load! # To load all models app/models/**/*.rb
-    @all_records = ActiveRecord::Base.descendants.map &:all
-    @map = Map.all
-    render :layout => false
-    
-  end
 
   # GET /maps/1
   def show

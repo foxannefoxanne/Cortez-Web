@@ -1,22 +1,23 @@
-<% 
-my_hash = { "mapName" => "#{@map.title}" }
+<% if (@map.ispublic == 1) || (@map.user_id == @user_id) %>
+  <% 
+  my_hash = { "mapName" => "#{@map.title}" }
 
-arr = @pins.map{ |pin|
-    {
-    "markerTitle": pin.title,
-    "markerSnippet": pin.description,
-     "location": {
-        "lat": pin.latitude,
-        "lng": pin.longitude,
-      },
-      "radius": 100,
-      "expirationDuration": -1,
-      "notificationResponsiveness": 0,
-       "GEOFENCE_TRANSITION_ENTER": {
-          "sendNotification": true,
-          "notificationText": ""
-         },
-         "GEOFENCE_TRANSITION_DWELL": {
+  arr = @pins.map{ |pin|
+      {
+      "markerTitle": pin.title,
+      "markerSnippet": pin.description,
+      "location": {
+          "lat": pin.latitude,
+          "lng": pin.longitude,
+        },
+        "radius": 100,
+        "expirationDuration": -1,
+        "notificationResponsiveness": 0,
+        "GEOFENCE_TRANSITION_ENTER": {
+            "sendNotification": true,
+            "notificationText": ""
+          },
+          "GEOFENCE_TRANSITION_DWELL": {
            "loiteringDelay": 30000,
             "sendNotification": true,
             "notificationText": ""
@@ -35,3 +36,5 @@ arr = @pins.map{ |pin|
 my_hash["geofences"] = arr
 %>
 <pre><%= JSON.pretty_generate(my_hash) %></pre>
+
+<% end %> 

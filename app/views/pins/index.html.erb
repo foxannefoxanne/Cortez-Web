@@ -6,8 +6,8 @@
 </head>
 
 <body>
-<!-- <p id="notice"><%= notice %></p> --> 
 <p id="locn"></p> 
+<% if (@map.ispublic == 1) || (@map.user_id == @user_id) %>
 
 <div>
   <div id="map" style='width: 100%; height: 85vh;'>
@@ -59,21 +59,24 @@ function displayOnMap(position){
     }
 }); 
 
-google.maps.event.addListener (handler.getMap(), 'click', function(event){
-  lat = event.latLng.lat()
-  lng = event.latLng.lng()
-  //TODO: display question before redirecting? 
-   var retVal = confirm("Do you want to create a new pin here?")
-   if(retVal == true){
-      window.location = "pins/new?latitude=" + lat + "&longitude=" + lng
-      return true; 
+<% if (@map.public_edit == 1) || (@map.user_id == @user_id) %>
+  google.maps.event.addListener (handler.getMap(), 'click', function(event){
+    lat = event.latLng.lat()
+    lng = event.latLng.lng()
+    var retVal = confirm("Do you want to create a new pin here?")
+    if(retVal == true){
+        window.location = "pins/new?latitude=" + lat + "&longitude=" + lng
+       return true; 
+      }
+      else{
+      return false; 
     }
-    else{
-     return false; 
-   }
 });
+<% end %> 
 
 };
 </script> 
-
+<% else %> 
+You do not have permission to view this map 
+<% end %> 
 </body> 

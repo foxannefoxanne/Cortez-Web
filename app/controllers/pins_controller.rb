@@ -2,17 +2,29 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   def pin_dump
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
     @map = Map.find(params[:map_id])
-    @pin = @map.pins.find(params[:pin_id])
-    @pictures = @pin.pictures
-    @audios = @pin.audios
-    @videos = @pin.videos
-
+    if @map.ispublic == 1 || @map.user_id == @user_id
+      @pin = @map.pins.find(params[:pin_id])
+      @pictures = @pin.pictures
+      @audios = @pin.audios
+      @videos = @pin.videos
+   end 
     render :layout => false
   end 
 
   # GET /pins
   def index
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
+
      @map = Map.find(params[:map_id])
      @pins = @map.pins.all
      @hash = Gmaps4rails.build_markers(@pins) do |pin, marker|
@@ -28,6 +40,11 @@ class PinsController < ApplicationController
 
   # GET /pins/1
   def show
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
      @map = Map.find(params[:map_id])
      @pin = @map.pins.find(params[:id])
      @pictures = @pin.pictures
@@ -51,6 +68,12 @@ class PinsController < ApplicationController
 
   # GET /pins/1/edit
   def edit
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
+
      @map = Map.find(params[:map_id])
      @pin = @map.pins.find(params[:id])
   end
@@ -138,6 +161,12 @@ class PinsController < ApplicationController
   end
 
   def editmedia
+    if current_user
+       @user_id = current_user.id
+    else
+       @user_id = -1
+    end
+
      @map = Map.find(params[:map_id])
      @pin = @map.pins.find(params[:pin_id])
      @pictures = @pin.pictures

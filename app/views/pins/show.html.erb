@@ -1,3 +1,5 @@
+<% if (@map.ispublic == 1) || (@map.user_id == @user_id) %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -82,4 +84,8 @@
 
 <%= link_to "Edit Media", map_pin_editmedia_path(:pin_id => @pin.id, :map_id => @map.id), class: "btn btn-primary" %>
 <%= link_to 'Edit', edit_map_pin_path(:id => @pin.id, :map_id => @map.id),  class: "btn btn-primary" %>
+
+<% else %> 
+You do not have permissoin to view this map 
+<% end %> 
 <%= link_to 'Back', map_pins_path, class: "btn btn-primary", 'data-no-turbolink' => true   %>

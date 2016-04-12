@@ -1,6 +1,8 @@
+
 <p id="notice"><%= notice %></p>
 
 <h1>Current Maps</h1>
+
 
 <table class="table table-hover">
   <!--<thead>
@@ -18,8 +20,10 @@
           <td><%= map.description %></td>
           
           <td><%= link_to 'Show', map_pins_path(map), class: "btn btn-sm btn-primary", 'data-no-turbolink' => true  %></td>
-          <td><%= link_to 'Edit', edit_map_path(map), class: "btn btn-sm btn-primary" %></td>
-          <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-primary" %></td>
+          <% if (map.user_id == @user_id) %>
+            <td><%= link_to 'Edit', edit_map_path(map), class: "btn btn-sm btn-primary" %></td>
+            <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-primary" %></td>
+          <% end %> 
         </tr>
         <% end %> 
       <% end %>
