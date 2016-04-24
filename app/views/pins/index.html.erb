@@ -14,6 +14,27 @@
 </div>
 </div>  
 
+
+<div class="modal fade" id="mapModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Create Pin</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to create a pin at this location?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="no">No</button>
+        <button type="button" class="btn btn-primary" id="yes">Yes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <script type="text/javascript" charset='utf-8'>
 
 
@@ -63,14 +84,23 @@ google.maps.event.addListener (handler.getMap(), 'click', function(event){
   lat = event.latLng.lat()
   lng = event.latLng.lng()
   //TODO: display question before redirecting? 
-   var retVal = confirm("Do you want to create a new pin here?")
-   if(retVal == true){
+   $('#mapModal').modal('show');
+
+   $("#yes").off('click').click(function() {
+        $('#mapModal').modal("hide");
+        window.location = "pins/new?latitude=" + lat + "&longitude=" + lng
+        return 1;
+    }); 
+    $("#no").off('click').click(function () {
+        $confirm.modal("hide");
+        return 0;
+    });     /*if(retVal == true){
       window.location = "pins/new?latitude=" + lat + "&longitude=" + lng
       return true; 
     }
     else{
      return false; 
-   }
+   }*/
 });
 
 };
