@@ -1,7 +1,49 @@
+<head>
+    <%= stylesheet_link_tag    'slick/slick.css' %>
+    <%= stylesheet_link_tag    'slick/slick-theme.css' %>
+</head>
+<body>
 <% provide(:title, "Home") %>
-  <h1 style="text-align:left;">Welcome to Cortez</h1>
 
-<div class="center jumbotron">
+<div class="center jumbotron" stytle="padding-top=0px">
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<%= javascript_include_tag 'slick/slick.min.js', 'data-turbolinks-track' => true %>
+</script>
+
+<center>
+<div class="mobiledemo" style="max-width:200px">
+    <div style="max-width:200px" class="thumbnail">
+        <%= image_tag "/images/mobile/1.png" %> 
+    </div>
+    <div style="max-width:200px" class="thumbnail">
+        <%= image_tag "/images/mobile/2.png" %> 
+    </div>
+    <div style="max-width:200px" class="thumbnail">
+        <%= image_tag "/images/mobile/3.png" %> 
+    </div>
+    <div style="max-width:200px" class="thumbnail">
+        <%= image_tag "/images/mobile/4a.png" %> 
+    </div>
+      <div style="max-width:200px" class="thumbnail">
+        <%= image_tag "/images/mobile/4b.png" %> 
+    </div>
+</div>
+</center>
+
+<script type="text/javascript"d>
+$(document).ready(function(){
+   $('.mobiledemo').slick({
+  		 slidesToScroll: 1,
+  		 autoplay: true,
+  		 autoplaySpeed: 4000,
+  		 infinite: true, 
+
+  });
+});
+</script>
+
 <h2> Cortez is a map-based adventure enhancement app! You can upload text, images, sound, or video and place them on a selected piece of map! Try it out now or make an account!</h2>
 
   <%= link_to "Start Your Adventure!", maps_path, class: "btn btn-lg btn-primary homebutton" %>
@@ -10,3 +52,4 @@
 
 <%= link_to image_tag("rails.png", alt: "Rails logo"),
             '#' %>
+</body>
